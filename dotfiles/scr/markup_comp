@@ -1,0 +1,5 @@
+#!/bin/bash
+[[ -v $2 ]] || cd ./$2
+cd ${1%/*}
+markup ${1##*/}
+dunstify -a markup_comp compiled $1

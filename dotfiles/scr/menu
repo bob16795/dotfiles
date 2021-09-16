@@ -1,0 +1,1 @@
+exec dmenu -w $1 -c -y -16 -l 0 -bw 0

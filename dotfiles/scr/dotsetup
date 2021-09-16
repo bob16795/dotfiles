@@ -1,0 +1,28 @@
+source $HOME/.profile
+filesort create
+
+mkdir -p $HOME/.config/ranger/plugins/
+git clone https://github.com/cdump/ranger-devicons2 $HOME/.config/ranger/plugins/ranger-devicons2
+
+IFS=$'\n'
+
+for line in $(cat {{@@ _dotdrop_dotpath @@}}/packages.txt); do
+  type=$(echo $line | cut -d " " -f1)
+  toinstall=$(echo $line | cut -d " " -f2)
+
+  case $type in
+    "P")
+      echo $toinstall
+      sudo pacman -S --needed $toinstall ;;
+    "G")
+      clonedir=$HOME/doc/rep/github.com/${toinstall##/*}
+      git clone http://github.com/$toinstall $clonedir
+      pushd $clonedir
+      make
+      sudo make install
+      popd
+      ;;
+    esac
+done
+
+unset IFS

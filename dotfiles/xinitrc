@@ -1,0 +1,27 @@
+#!/bin/bash
+
+cd
+screen.sh
+eval $(/use/bin/gnome-keyring-daemon --start --component=gpg,pkcs11,secrets,ssh) &
+export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO GPG_AGENT_SOCK
+blueman-applet &
+nm-applet &
+flameshot &
+grive-indicator &
+bwp &
+devmon &
+killall -KILL pulseaudio
+killall -KILL python3
+pulseaudio &
+sxhkd &
+picom &
+xrdb .Xresources
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "synaptics Noise Cancellation" 40 40 &
+/usr/lib/gsd-xsettings &
+clipmenud &
+filesort &
+dunst &
+
+mw sync &
+
+exec budwm

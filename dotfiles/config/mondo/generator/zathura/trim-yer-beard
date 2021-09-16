@@ -1,0 +1,13 @@
+set default-bg \#262322
+set default-fg \#daba8b
+
+set statusbar-bg \#191716
+set statusbar-fg \#daba8b
+
+set recolor-lightcolor          \#191716 
+set recolor-darkcolor           \#daba8b
+set recolor true
+
+set render-loading true
+
+map <C-r> include /home/prestosilver/.config/zathura/zathurarc

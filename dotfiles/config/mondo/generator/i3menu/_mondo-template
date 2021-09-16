@@ -1,0 +1,32 @@
+* {
+  fg:          %%fg%%;
+  bg:          %%bg%%;
+
+  activefg:    %%act1%%;
+  activehl:    %%act3%%;
+  activebg:    %%act2%%;
+
+  inactivefg:  %%ina1%%;
+  inactivebg:  %%ina2%%;
+
+  red:         %%red%%;
+  green:       %%grn%%;
+  blue:        %%blu%%;
+  yellow:      %%ylw%%;
+  cyan:        %%cyn%%;
+  magenta:     %%mag%%;
+
+  light:       %%fg%%;
+  dark:        %%bg%%;
+
+  fg2:         %%fg%%;
+  comment:     %%mix fg bg .75%%;
+
+  bg2:         %%bg%%;
+
+  selectedfg:  %%act1%%;
+  selectedbg:  %%act2%%;
+
+  font1: "FixedFixedsys 12";
+}
+

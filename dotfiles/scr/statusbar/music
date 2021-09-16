@@ -1,0 +1,29 @@
+case $1 in
+  1) spt pb -t; exit;;
+  2) spt pb -p; exit;;
+  3) spt pb -n; exit;;
+esac
+
+#spt pb
+#[[ "$(pgrep spotify)" == "" ]] || { eval "$(spotify-cli now-playing)" \
+#  && printf "  $spotify_artist_name - $spotify_track_name" \
+#  | tr -d '\n' \
+#  | awk -v len=40 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }'; exit; }
+#
+#[[ "$(mpc current)" == "" ]] && { printf "\xf1 no music "; exit;}
+#
+##[[ $(mpc status) == *'[playing]'* ]] || printf "\xf2"
+##[[ $(mpc status) == *'[playing]'* ]] && printf "\xf1"
+#if [[ $1 == icon ]]; then
+#  [[ $(mpc status) == *'[playing]'* ]] || printf "  \n"
+#  [[ $(mpc status) == *'[playing]'* ]] && printf "  \n"
+#  exit
+#fi
+#
+#mpc status \
+#  |sed "/^volume:/d" \
+#  | tac \
+#  | sed -e "s/\\[paused\\].*/  /g;s/\\[playing\\].*/  /g" \
+#  | tr -d '\n' | sed "s/\;//g" \
+#  | awk -v len=40 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }'
+#echo " "

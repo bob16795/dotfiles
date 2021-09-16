@@ -1,0 +1,46 @@
+theme               nord
+mag                 #D08770
+terminalfontsize1   12
+terminalfontsize2   12
+base0               #D8DEE9
+base1               #E5E9F0
+base2               #ECEFF4
+base3               #f9f5d7
+black               #000000
+guifontface1        CaskaydiaCove Nerd Font
+red                 #BF616A
+fg1                 #D8DEE9
+sel1                #2E3440
+sel2                #f9f5d7
+fg2                 #ECEFF4
+dark1               #2E3440
+vio                 #B48EAD
+icontheme           ePapirus
+cursortheme         Adwaita  
+bg1                 #2E3440
+act1                #3B4252
+light1              #f9f5d7
+bg2                 #4C566A
+act2                #f9f5d7
+#define             fg #bdae93
+act3                #4C566A
+ora                 #81A1C1
+terminalfontface1   CaskaydiaCove Nerd Font
+terminalfontface2   Twitter Color Emoji
+base00              #2E3440
+base01              #3B4252
+base02              #434C5E
+base03              #4C566A
+blu                 #5E81AC
+bg                  #2E3440
+cyn                 #88C0D0
+ylw                 #EBCB8B
+fg                  #D8DEE9
+ina1                #434C5E
+ina2                #D8DEE9
+ina3                #4C566A
+grn                 #A3BE8C
+guifontsize1        12
+guifontsize2        10
+white               #ffffff
+gtktheme            buddybud 

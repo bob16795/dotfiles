@@ -1,0 +1,32 @@
+* {
+  fg:          #adbcbc;
+  bg:          #103c48;
+
+  activefg:    #103c48;
+  activehl:    #184956;
+  activebg:    #cad8d9;
+
+  inactivefg:  #184956;
+  inactivebg:  #72898f;
+
+  red:         #fa5750;
+  green:       #75b938;
+  blue:        #4695f7;
+  yellow:      #dbb32d;
+  cyan:        #41c7b9;
+  magenta:     #f275be;
+
+  light:       #adbcbc;
+  dark:        #103c48;
+
+  fg2:         #adbcbc;
+  comment:     #375C65;
+
+  bg2:         #103c48;
+
+  selectedfg:  #103c48;
+  selectedbg:  #cad8d9;
+
+  font1: "FixedFixedsys 12";
+}
+

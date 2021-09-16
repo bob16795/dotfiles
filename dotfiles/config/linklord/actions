@@ -1,0 +1,4 @@
+exec gurl %u 
+print %t - %u
+exec qutebrowser %u 
+exec echo %u | xclip -i -selection clipboard -rmlastnl

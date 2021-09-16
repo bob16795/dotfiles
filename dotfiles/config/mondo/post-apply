@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This script is executed AFTER all other applying
+# actions and scripts are finished, when mondo is 
+# executed with the apply option (-a).
+
+# The intension of this script is to let you adjust
+# your environment after applying a new theme.
+
+# For instance one might want to reload certain processes
+# like windowmanagers and statusbars. 
+
+sh ~/scr/reload.sh

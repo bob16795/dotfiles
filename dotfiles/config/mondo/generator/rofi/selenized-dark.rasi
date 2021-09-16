@@ -1,0 +1,96 @@
+* {
+  fg:          #adbcbc;
+  bg:          #103c48;
+
+  activefg:    #103c48;
+  activehl:    #184956;
+  activebg:    #cad8d9;
+
+  inactivefg:  #184956;
+  inactivebg:  #72898f;
+
+  red:         #fa5750;
+  green:       #75b938;
+  blue:        #4695f7;
+  yellow:      #dbb32d;
+  cyan:        #41c7b9;
+  magenta:     #f275be;
+
+  light:       #adbcbc;
+  dark:        #103c48;
+
+  fg2:         #adbcbc;
+  comment:     #375C65;
+
+  bg2:         #103c48;
+
+  selectedfg:  #103c48;
+  selectedbg:  #cad8d9;
+
+  font1: "FixedFixedsys 12";
+}
+*{
+  background-color:    @bg2;
+  border-color:        @bg2;
+  text-color:          @fg;
+  selbg:               @activefg;
+  selfg:               @activebg;
+  promptbg:            @activefg;
+  promptfg:            @activebg;
+  window-padding:      200px;
+}
+
+/**
+* Oneliner - by budRich 2018
+* Based on dmenu theme by Dave Davenport
+*/
+
+#window {
+  anchor:     @window-anchor;
+  location:   north west;
+  padding:    @window-padding;
+
+  width:     1366;
+  height:    768;
+  x-offset:  @window-x;
+  y-offset:  @window-y;
+  children:  @window-content;
+}
+
+#horibox {
+  orientation: horizontal;
+  children:    @horibox-content;
+}
+
+#inputbar {
+  children:   @inputbar-content;
+}
+
+#listview {
+  layout:     @listview-layout;
+  lines:      @listview-lines;
+  spacing:    5px;
+  dynamic:    true;
+}
+
+#entry {
+  expand:     @entry-expand;
+  width:      @entry-width;
+}
+
+
+#element {
+  padding: 0px 2px;
+}
+
+#element selected {
+  text-color: @selfg;
+  background-color: @selbg;
+}
+
+#prompt {
+  text-color: @promptfg;
+  background-color: @promptbg;
+}
+
+// syntax:ssDslash

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# This script is executed every time a theme is generated.
+# Each generator can have it's own mondo-generate script.
+
+# The default syntax is bash, but by changing the shebang,
+# one could use another language (f.i. perl or python).
+##
+# $1 is equal to: $MONDO_DIR/generator/TYPE/THEME[.extensions]
+
+# If this script is not needed, this file can safely be removed.
+# (removing the file, will improve executioni speed)
+
+# this_dir="${1%/*}"
+this_file="${1##*/}"
+this_theme="${this_file%.*}"
+
+# To source the settings file one could use this:
+# source "${this_dir}/mondo-settings"
+
+# [ -d ~/.themes/$this_theme ] || oomox-cli -o $this_theme -m all $1 
+[ -d ~/.icons/$this_theme ] || /opt/oomox/plugins/icons_numix/change_color.sh -o $this_theme $1 
+# echo 
+#[ -d $1.spotify ] || mkdir $1.spotify; oomoxify-cli -s $1.spotify $1 -g

@@ -1,0 +1,50 @@
+bg #103c48
+fg #adbcbc
+
+base00 #184956
+base01 #72898f
+base02 #2d5b69
+base03 #cad8d9
+
+base0 #2d5b69
+base1 #72898f
+base2 #adbcbc
+base3 #cad8d9
+
+red #fa5750
+ora #ff665c
+grn #75b938
+ylw #dbb32d
+blu #4695f7
+mag #f275be
+vio #ff84cd
+cyn #41c7b9
+
+fg1         fg
+fg2         base02
+bg1         bg
+bg2         base03
+
+act1        bg
+act2        base03
+act3        base00
+
+ina1        base00
+ina2        base01
+ina3        base00
+
+sel1        ora
+sel2        ora
+
+cursortheme     Adwaita  
+icontheme       ePapirus
+gtktheme        buddybud 
+
+terminalfontface1 CaskaydiaCove Nerd Font
+terminalfontsize1 12
+terminalfontface2 Twitter Color Emoji
+terminalfontsize2 12
+
+guifontface1      CaskaydiaCove Nerd Font
+guifontsize1      12
+guifontsize2      10

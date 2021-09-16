@@ -1,0 +1,18 @@
+case $1 in
+	"1") pamixer -t ; exit; xsetroot -name "fsignal:2";;
+  "icon")
+    if [ "$(pamixer --get-mute)" == "true" ]; then
+      printf "\xf2\n"
+    else
+      printf "\xf1\n"
+    fi
+    exit
+esac
+
+vol=$(pamixer --get-volume)
+
+if [ "$(pamixer --get-mute)" == "true" ]; then
+  printf "\xf2 $vol\n"
+  exit
+fi
+printf "\xf1 %s\n" $vol

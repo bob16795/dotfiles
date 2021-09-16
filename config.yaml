@@ -1,0 +1,125 @@
+actions:
+  setup: bash ~/scr/dotsetup
+dynvariables:
+  user: echo $USER
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+dotfiles:
+  setup:
+    src:
+    dst:
+    actions:
+    - setup
+  f_xinitrc:
+    src: xinitrc
+    dst: ~/.xinitrc
+    chmod: '755'
+  f_init.vim:
+    src: config/nvim/init.vim
+    dst: ~/.config/nvim/init.vim
+  d_bash:
+    src: config/bash
+    dst: ~/.config/bash
+  f_sxhkdrc:
+    src: config/sxhkd/sxhkdrc
+    dst: ~/.config/sxhkd/sxhkdrc
+  d_mondo:
+    src: config/mondo
+    dst: ~/.config/mondo
+  d_scr:
+    src: scr
+    dst: ~/scr
+  f_user-dirs.dirs:
+    src: config/user-dirs.dirs
+    dst: ~/.config/user-dirs.dirs
+    chmod: '600'
+  d_colors:
+    src: config/nvim/colors
+    dst: ~/.config/nvim/colors
+  d_vscode-wal:
+    src: vscode-oss/extensions/vscode-wal
+    dst: ~/.vscode-oss/extensions/vscode-wal
+  f_config.py:
+    src: config/qutebrowser/config.py
+    dst: ~/.config/qutebrowser/config.py
+    chmod: '755'
+  f_autoconfig.yml:
+    src: config/qutebrowser/autoconfig.yml
+    dst: ~/.config/qutebrowser/autoconfig.yml
+  f_commands.py:
+    src: config/ranger/commands.py
+    dst: ~/.config/ranger/commands.py
+  f_rc.conf:
+    src: config/ranger/rc.conf
+    dst: ~/.config/ranger/rc.conf
+  f_rifle.conf:
+    src: config/ranger/rifle.conf
+    dst: ~/.config/ranger/rifle.conf
+  f_scope.sh:
+    src: config/ranger/scope.sh
+    dst: ~/.config/ranger/scope.sh
+    chmod: '755'
+  f_monochrome.py:
+    src: config/ranger/colorschemes/monochrome.py
+    dst: ~/.config/ranger/colorschemes/monochrome.py
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+  f_xresources:
+    src: Xresources
+    dst: ~/.Xresources
+    chmod: '755'
+  f_profile:
+    src: profile
+    dst: ~/.profile
+  f_settings:
+    src: config/linklord/settings
+    dst: ~/.config/linklord/settings
+  f_actions:
+    src: config/linklord/actions
+    dst: ~/.config/linklord/actions
+    chmod: '600'
+  f_dunst-settings:
+    src: config/dunst/dunst-settings
+    dst: ~/.config/dunst/dunst-settings
+  f_dunst-theme:
+    src: config/dunst/dunst-theme
+    dst: ~/.config/dunst/dunst-theme
+    chmod: '755'
+  f_dunstrc:
+    src: config/dunst/dunstrc
+    dst: ~/.config/dunst/dunstrc
+profiles:
+  prestosilver-pc:
+    dotfiles:
+    - f_xinitrc
+    - f_init.vim
+    - d_bash
+    - f_sxhkdrc
+    - d_mondo
+    - d_scr
+    - f_user-dirs.dirs
+    - d_colors
+    - d_vscode-wal
+    - f_config.py
+    - f_autoconfig.yml
+    - f_commands.py
+    - f_rc.conf
+    - f_rifle.conf
+    - f_scope.sh
+    - f_monochrome.py
+    - f_bashrc
+    - f_xresources
+    - f_profile
+    - f_settings
+    - f_actions
+    - f_dunst-settings
+    - f_dunst-theme
+    - f_dunstrc

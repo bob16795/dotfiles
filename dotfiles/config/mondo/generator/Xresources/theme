@@ -1,0 +1,113 @@
+mondo.colors.fg1:         
+mondo.colors.fg2:         
+mondo.colors.bg1:         
+mondo.colors.bg2:         
+
+mondo.colors.dark1:       
+mondo.colors.light1:      
+
+mondo.colors.act1:        
+mondo.colors.act2:        
+mondo.colors.act3:        
+
+mondo.colors.ina1:        
+mondo.colors.ina2:        
+mondo.colors.ina3:        
+
+mondo.colors.sel1:        
+mondo.colors.sel2:        
+
+
+mondo.terminal.fontface1: 
+mondo.terminal.fontface2: 
+mondo.terminal.fontsize1: 
+mondo.terminal.fontsize2: 
+
+mondo.colors.yellow:      
+mondo.colors.orange:      
+mondo.colors.redish:      
+mondo.colors.magenta:     
+mondo.colors.violet:      
+mondo.colors.blue:        
+mondo.colors.cyan:        
+mondo.colors.green:       
+
+mondo.gui.cursor:         
+mondo.gui.icon:           
+mondo.gui.gtk:            
+
+mondo.gui.fontface1:      
+mondo.gui.fontface2:      
+mondo.gui.fontsize1:      
+mondo.gui.fontsize2:      
+
+mondo.pb.size:            
+mondo.pb.font1:           :size=;2
+mondo.pb.font2:           FontAwesome5Free:style=Solid:size=;2
+mondo.pb.font3:           FontAwesome5Brands:style=Solid:size=;2
+*.foreground:             
+*.background:             
+*.cursorColor:            
+*.cursorColor2:           
+*.borderColor:            
+
+*.color0:                 
+*.color8:                 
+*.color1:                 
+*.color9:                 
+*.color2:                 
+*.color10:                
+*.color3:                 
+*.color11:                
+*.color4:                 
+*.color12:                
+*.color5:                 
+*.color13:                
+*.color6:                 
+*.color14:                
+*.color7:                 
+*.color15:                
+
+! rxvt-unicode-256color settings . 
+! curated by budRich since 2015
+
+URxvt*underlineColor:      
+URxvt*highlightColor:      
+URxvt*highlightTextColor:  
+
+! URxvt*colorBD:             
+! URxvt*colorIT:             
+! URxvt*colorUL:             
+
+*perl-ext-common: default,matcher,url-select,keyboard-select,config-reload
+st.borderpx:          1
+*cursorBlink:         1
+*scrollBar:           false
+*internalBorder:      5
+*saveLines:           32767
+*iso14755:            false
+*iso14755_52:         false
+
+st.font:       :size=:antialias=true, :size=:antialias=true
+*boldFont:       
+*italicFont:     
+*boldItalicFont: 
+
+URxvt.url-launcher:        brws
+URxvt.matcher.button: 1
+URxvt.url-select.underline: true
+
+
+URxvt.keysym.C-g: perl:url-select:select_next
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.CM-s: searchable-scrollback:start
+URxvt.keysym.M-s: builtin:
+
+URxvt*print-pipe: cat > $(echo /tmp/urxvt-dump.$(date +%Y-%m-%d_%H:%M:%S_%N))
+
+! syntax:ssExcla
+
+URxvt*cutchars: "\"()*,<>[]{}|\'"
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot
+st.alpha: 1

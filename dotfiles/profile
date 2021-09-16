@@ -1,0 +1,35 @@
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+
+TZ='America/New_York'; export TZ
+# anti-DM
+
+# wait two seconds for input from user
+# start desired environment.
+# if none selected, defaults to startx (i3)
+# find way to kill x and return to login when mint is active.
+
+read -rsn1 -t2 input
+if [ -n "$input" ]; then
+  case $input in
+    1 ) start=bash ;; # bash
+    2 ) startx $HOME/.xinitrc > /dev/null 2>&1 ;;
+    3 ) sudo systemctl start lightdm.service > /dev/null 2>&1 ;;
+  esac
+fi
+
+[ -z "$input" ] && startx  $HOME/.xinitrc > /dev/null 2>&1
+killall pulseaudio
+
+# opam configuration
+test -r /home/john/.opam/opam-init/init.sh && . /home/john/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+export MGFXC_WINE_PATH=/home/john/.winemonogame
+
+export MGFXC_WINE_PATH=/home/john/.winemonogame

@@ -1,0 +1,2 @@
+x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/john/.vnc/passwd -rfbport 5900 -shared -clip xinerama0 &
+novnc --vnc :5900 --listen 6081
