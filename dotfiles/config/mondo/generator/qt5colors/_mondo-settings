@@ -16,4 +16,4 @@ format="hex"
 # target can be an (absolute) file path to where
 # the file will be copied when a theme is applied.
 
-target="/home/prestosilver/.config/qt5ct/colors/mondo.conf"
+target="$HOME/.config/qt5ct/colors/mondo.conf"

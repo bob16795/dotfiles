@@ -18,7 +18,7 @@ this_file="${1##*/}"
 # To source the settings file one could use this:
 # source "${this_dir}/mondo-settings"
 
-gtk_dir="/home/prestosilver/doc/rep/numix-solarized-gtk-theme"
+gtk_dir="$HOME/doc/rep/numix-solarized-gtk-theme"
 
 generategtk(){
   PATH="$HOME/.gem/ruby/2.6.0/bin:$HOME/bin:$HOME/scr:$HOME/.local/bin:$PATH"

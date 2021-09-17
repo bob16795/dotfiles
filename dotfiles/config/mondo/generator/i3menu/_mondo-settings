@@ -29,4 +29,4 @@
 
 # target can be an (absolute) file path to where
 # the file will be copied when a theme is applied.
-target="/home/prestosilver/.config/i3menu/base/themevars.rasi"
+target="$HOME/.config/i3menu/base/themevars.rasi"

@@ -16,6 +16,6 @@ format="hex"
 # target can be an (absolute) file path to where
 # the file will be copied when a theme is applied.
 
-target="/home/prestosilver/.config/rofi/config.rasi"
+target="$HOME/.config/rofi/config.rasi"
 
 # syntax:ssHash

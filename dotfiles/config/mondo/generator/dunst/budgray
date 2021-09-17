@@ -39,7 +39,7 @@
     font = CaskaydiaCovePL Nerd Font 10
 
     # Paths to default icons.
-    icon_path = /home/prestosilver/.icons/budgray/16/status:/home/john/.icons/budgray/16/devices/
+    icon_path = $HOME/.icons/budgray/16/status:/home/john/.icons/budgray/16/devices/
 # syntax:ssHash
 
 # act1: ;

@@ -39,7 +39,7 @@
     font = CaskaydiaCovePL Nerd Font Mono 10
 
     # Paths to default icons.
-    icon_path = /home/prestosilver/.icons/notepad/16/status:/home/john/.icons/notepad/16/devices/
+    icon_path = $HOME/.icons/notepad/16/status:/home/john/.icons/notepad/16/devices/
 # syntax:ssHash
 
 # act1: ;

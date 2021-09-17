@@ -15,4 +15,4 @@ colorformat="%R%G%B"
 # target can be an (absolute) file path to where
 # the file will be copied when a theme is applied.
 
-# target="/home/prestosilver/doc/rep/numix-solarized-gtk-theme/mondo.colors"
+# target="$HOME/doc/rep/numix-solarized-gtk-theme/mondo.colors"

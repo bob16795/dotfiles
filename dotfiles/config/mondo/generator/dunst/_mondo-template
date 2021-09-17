@@ -39,7 +39,7 @@
     font = %%terminalfontface1%% 10
 
     # Paths to default icons.
-    icon_path = /home/prestosilver/.icons/%%theme%%/16/status:/home/john/.icons/%%theme%%/16/devices/
+    icon_path = $HOME/.icons/%%theme%%/16/status:/home/john/.icons/%%theme%%/16/devices/
 # syntax:ssHash
 
 # act1: %%colors.act1%%;

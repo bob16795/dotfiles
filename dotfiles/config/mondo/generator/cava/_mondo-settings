@@ -16,6 +16,6 @@
 # target can be an (absolute) file path to where
 # the file will be copied when a theme is applied.
 
-target="/home/prestosilver/.config/cava/config"
+target="$HOME/.config/cava/config"
 
 # syntax:ssHash

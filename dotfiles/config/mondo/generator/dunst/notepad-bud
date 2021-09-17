@@ -39,7 +39,7 @@
     font = CaskaydiaCovePL Nerd Font 10
 
     # Paths to default icons.
-    icon_path = /home/prestosilver/.icons/notepad-bud/16/status:/home/john/.icons/notepad-bud/16/devices/
+    icon_path = $HOME/.icons/notepad-bud/16/status:/home/john/.icons/notepad-bud/16/devices/
 # syntax:ssHash
 
 # act1: ;

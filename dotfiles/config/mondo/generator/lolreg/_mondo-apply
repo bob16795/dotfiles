@@ -18,7 +18,7 @@ THIS_THEME="${THIS_FILE%.*}"
 
 # To source the settings file one could use this:
 # source "${THIS_DIR}/_mondo-settings"
-cd /home/prestosilver
+cd $HOME
 
 wine reg import ".config/mondo/generator/lolreg/$THIS_THEME"
 

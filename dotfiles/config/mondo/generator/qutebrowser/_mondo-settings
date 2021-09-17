@@ -29,4 +29,4 @@
 
 # target can be an (absolute) file path to where
 # the file will be copied when a theme is applied.
-target="/home/prestosilver/.config/qutebrowser/config.py"
+target="$HOME/.config/qutebrowser/config.py"
