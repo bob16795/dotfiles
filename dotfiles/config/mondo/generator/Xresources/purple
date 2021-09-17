@@ -37,10 +37,10 @@ budwm.selfgcolor:           #d9cfd3
 st.borderpx:          1
 st.alpha: 1
 
-*.font:       CaskaydiaCove Nerd Font:size=12:antialias=true
+*.font:       CaskaydiaCovePL Nerd Font:size=12:antialias=true
 ! #:size=10:antialias=true
-st.font:       CaskaydiaCove Nerd Font:size=12:antialias=true
-*boldFont:       CaskaydiaCove Nerd Font:size=12:antialias=true, Twitter Color Emoji:size=12:antialias=true
+st.font:       CaskaydiaCovePL Nerd Font:size=12:antialias=true
+*boldFont:       CaskaydiaCovePL Nerd Font:size=12:antialias=true, Twitter Color Emoji:size=12:antialias=true
 *italicFont:     
 *boldItalicFont: 
 

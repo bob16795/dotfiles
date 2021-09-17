@@ -36,7 +36,7 @@
     #  * anything else will be interpreted as a X color.
     separator_color = frame
 
-    font = CaskaydiaCove Nerd Font 10
+    font = CaskaydiaCovePL Nerd Font 10
 
     # Paths to default icons.
     icon_path = /home/prestosilver/.icons/bluewery/16/status:/home/john/.icons/bluewery/16/devices/

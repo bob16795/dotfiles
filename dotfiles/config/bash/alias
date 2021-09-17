@@ -4,7 +4,6 @@ alias dlp='cd ~/Downloads/p'
 
 alias spotifyd='spotifyd -u 21ndnpvlkdukezg7ht2mkcyay -P "pass spotify" -d "johnpc lmao" --on-song-change-hook "mediacontrol update"'
 
-alias code='subl'
 alias cnf='cd ~/.config'
 alias tmp='cd /tmp'
 
