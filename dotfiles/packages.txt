@@ -54,7 +54,6 @@ P python-pip
 P python-wheel
 P qutebrowser
 P ranger
-P screenrecorder-git
 P scrot
 P spotify-tui
 P spotifyd
