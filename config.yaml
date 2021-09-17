@@ -30,9 +30,16 @@ dotfiles:
   f_sxhkdrc:
     src: config/sxhkd/sxhkdrc
     dst: ~/.config/sxhkd/sxhkdrc
-  d_mondo:
+  d_mondo_gen:
     src: config/mondo
     dst: ~/.config/mondo
+    upignore: "!*/generator/*/_*"
+    instignore: "!*/generator/*/_*"
+  d_mondo_thm:
+    src: config/mondo
+    dst: ~/.config/mondo
+    upignore: "!*/themes/*"
+    instignore: "!*/themes/*"
   d_scr:
     src: scr
     dst: ~/scr
@@ -104,7 +111,8 @@ profiles:
       - f_init.vim
       - d_bash
       - f_sxhkdrc
-      - d_mondo
+      - d_mondo_gen
+      - d_mondo_thm
       - d_scr
       - f_user-dirs.dirs
       - d_colors

@@ -1,7 +1,0 @@
-set default-bg \
-set default-fg \
-
-set statusbar-bg \
-set statusbar-fg \
-
-map <C-r> include $HOME/.config/zathura/zathurarc
