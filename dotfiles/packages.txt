@@ -128,6 +128,7 @@ P zathura-pdf-mupdf
 P zoxide
 P oomox
 P ttf-kascadia
+P ttf-twemoji-color
 P exa
 G bob16795/budwm
 G bob16795/st
