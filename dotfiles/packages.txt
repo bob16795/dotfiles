@@ -127,6 +127,7 @@ P zathura
 P zathura-pdf-mupdf
 P zoxide
 P oomox
+P ttf-kascadia
 P exa
 G bob16795/budwm
 G bob16795/st
