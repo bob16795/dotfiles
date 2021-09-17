@@ -47,3 +47,5 @@ git clone http://github.com/bob16795/colored-mist $HOME/doc/rep/github.com/color
 
 mondo -fg all
 mondo -a nord
+
+bwp -w {{@@ _dotdrop_dotpath @@}}/wallpaper.jpg
