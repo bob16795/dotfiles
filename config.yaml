@@ -92,6 +92,9 @@ dotfiles:
   f_picom.conf:
     src: config/picom.conf
     dst: ~/.config/picom.conf
+  f_dcatting.py:
+    src: config/ranger/colorschemes/dcatting.py
+    dst: ~/.config/ranger/colorschemes/dcatting.py
 profiles:
   default:
     actions:
@@ -122,3 +125,4 @@ profiles:
   prestosilver-pc:
     dotfiles:
     - f_picom.conf
+    - f_dcatting.py
