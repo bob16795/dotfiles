@@ -9,5 +9,3 @@ set recolor-darkcolor           \%%fg%%
 set recolor true
 
 set render-loading true
-
-map <C-r> include /home/prestosilver/.config/zathura/zathurarc
