@@ -4,6 +4,16 @@ filesort create
 mkdir -p $HOME/.config/ranger/plugins/
 git clone https://github.com/cdump/ranger-devicons2 $HOME/.config/ranger/plugins/ranger-devicons2
 
+sudo pacman -S --needed base-devel
+
+mkdir -p $HOME/doc/rep/aur.archlinux.org/
+git clone https://aur.archlinux.org/yay.git $HOME/doc/rep/aur.archlinux.org/yay
+pushd $HOME/doc/rep/aur.archlinux.org/yay
+
+makepkg -si
+
+popd
+
 IFS=$'\n'
 
 for line in $(cat {{@@ _dotdrop_dotpath @@}}/packages.txt); do
@@ -13,7 +23,7 @@ for line in $(cat {{@@ _dotdrop_dotpath @@}}/packages.txt); do
   case $type in
     "P")
       echo $toinstall
-      sudo pacman -S --needed $toinstall ;;
+      yay -S --needed $toinstall ;;
     "G")
       clonedir=$HOME/doc/rep/github.com/${toinstall##/*}
       git clone http://github.com/$toinstall $clonedir
