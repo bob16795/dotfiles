@@ -20,10 +20,8 @@ P dragon-drag-and-drop
 P dunst
 P fakeroot
 P feh
-P flutter
 P fzf
 P gcc
-P gcolor2
 P git
 P gnome-settings-daemon
 P htop
@@ -129,7 +127,9 @@ P yay
 P zathura
 P zathura-pdf-mupdf
 P zoxide
+P oomox
 G bob16795/budwm
 G bob16795/st
 G bob16795/dmenu
 G budlabs/gurl
+Y inotify

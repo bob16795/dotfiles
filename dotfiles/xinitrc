@@ -7,7 +7,6 @@ export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO GPG_AGENT_SOCK
 blueman-applet &
 nm-applet &
 flameshot &
-grive-indicator &
 bwp &
 devmon &
 killall -KILL pulseaudio

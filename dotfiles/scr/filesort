@@ -109,7 +109,7 @@ def presort():
 def _main():
     if (sys.argv[1] == "create"):
         for path in ["doc", "doc/src", "doc/pdf", "doc/rep", "doc/rep/github.com","dwn", "dwn/web", "mnt", "pix", "pix/memes", "pix/msc", "pix/ss", "pix/wallpapers", "snd", "vid"]:
-            if not os.path.isdir(path):
+            if not os.path.isdir(HOME / path):
                 os.mkdir(HOME / path)
                 print(f"made dir '{path}'")
             else:

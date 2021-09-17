@@ -1,5 +1,5 @@
-source $HOME/.profile
-filesort create
+sudo chown -R {{@@ user @@}} $HOME
+source $HOME/.bashrc
 
 mkdir -p $HOME/.config/ranger/plugins/
 git clone https://github.com/cdump/ranger-devicons2 $HOME/.config/ranger/plugins/ranger-devicons2
@@ -10,9 +10,11 @@ mkdir -p $HOME/doc/rep/aur.archlinux.org/
 git clone https://aur.archlinux.org/yay.git $HOME/doc/rep/aur.archlinux.org/yay
 pushd $HOME/doc/rep/aur.archlinux.org/yay
 
-makepkg -si
+pacman -Qe | grep -q yay || makepkg -si
 
 popd
+
+yay -S --noconfirm --needed python3 python-pip
 
 IFS=$'\n'
 
@@ -21,11 +23,14 @@ for line in $(cat {{@@ _dotdrop_dotpath @@}}/packages.txt); do
   toinstall=$(echo $line | cut -d " " -f2)
 
   case $type in
+    "Y")
+      echo $toinstall
+      sudo pip3 install $toinstall ;;
     "P")
       echo $toinstall
-      yay -S --needed $toinstall ;;
+      pacman -Qe | grep -q $toinstall || yay -S --noconfirm --needed $toinstall ;;
     "G")
-      clonedir=$HOME/doc/rep/github.com/${toinstall##/*}
+      clonedir=$HOME/doc/rep/github.com/${toinstall##*/}
       git clone http://github.com/$toinstall $clonedir
       pushd $clonedir
       make
@@ -36,3 +41,9 @@ for line in $(cat {{@@ _dotdrop_dotpath @@}}/packages.txt); do
 done
 
 unset IFS
+
+$HOME/scr/filesort create
+git clone http://github.com/bob16795/colored-mist $HOME/doc/rep/github.com/colored-mist
+
+mondo -fg all
+mondo -a nord

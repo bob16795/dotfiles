@@ -98,6 +98,8 @@ dotfiles:
     dst: ~/.config/dunst/dunstrc
 profiles:
   prestosilver-pc:
+    actions:
+    - setup
     dotfiles:
     - f_xinitrc
     - f_init.vim
