@@ -32,8 +32,6 @@ P imagemagick
 P j4-dmenu-desktop
 P libxft-bgra
 P linklord
-P linux
-P linux-firmware
 P lxappearance
 P maim
 P make
