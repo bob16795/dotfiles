@@ -33,13 +33,13 @@ dotfiles:
   d_mondo_gen:
     src: config/mondo
     dst: ~/.config/mondo
-    upignore: "!*/generator/*/_*"
-    instignore: "!*/generator/*/_*"
+    upignore:
+      - "*"
   d_mondo_thm:
     src: config/mondo
     dst: ~/.config/mondo
-    upignore: "!*/themes/*"
-    instignore: "!*/themes/*"
+    upignore:
+      - "*"
   d_scr:
     src: scr
     dst: ~/scr
