@@ -12,11 +12,6 @@ config:
   link_on_import: nolink
   longkey: false
 dotfiles:
-  setup:
-    src:
-    dst:
-    actions:
-    - setup
   f_xinitrc:
     src: xinitrc
     dst: ~/.xinitrc
