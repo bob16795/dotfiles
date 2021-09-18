@@ -133,6 +133,4 @@ profiles:
     - f_dunst-settings
     - f_picom.conf
     - f_dcatting.py
-  prestosilver-pc:
-    dotfiles:
     - f_settings.json
