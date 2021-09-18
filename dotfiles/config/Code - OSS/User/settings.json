@@ -1,0 +1,18 @@
+{
+    "workbench.colorTheme": "vs-wal",
+    "markdown.preview.breaks": true,
+    "dashboard.projectData": null,
+    "cSpell.userWords": [
+        "Leaderboards",
+        "Trello",
+        "nessessasary"
+    ],
+    "editor.formatOnSave": true,
+    "kite.showWelcomeNotificationOnStartup": false,
+    "git.autofetch": true,
+    "tabnine.experimentalAutoImports": true,
+    "omnisharp.useGlobalMono": "always",
+    "cSpell.enableFiletypes": [
+        "!csharp"
+    ]
+}
