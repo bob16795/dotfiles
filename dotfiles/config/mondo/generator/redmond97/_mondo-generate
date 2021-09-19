@@ -12,9 +12,19 @@
 # (removing the file, will improve executioni speed)
 
 # this_dir="${1%/*}"
-# this_file="${1##*/}"
+this_file="${1##*/}"
 # this_theme="${this_file%.*}"
 
 # To source the settings file one could use this:
 # source "${this_dir}/mondo-settings"
+
+gtk_dir="$HOME/doc/rep/github.com/theme-gen"
+
+generategtk(){
+  cd "$gtk_dir" || exit 
+  ./gen_theme.sh
+}
+
+cp -f "$1" "${gtk_dir}/theme.conf"
+[[ -d ~/.themes/${this_file}R ]] || (generategtk)
 
