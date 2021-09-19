@@ -4,7 +4,7 @@ super + d
 super + shift + d
   j4-dmenu-desktop --dmenu 'dmenu -p "DRun:"'
 super + l
-  linklord -x 'gurl "%u"'
+  linklord -x 'limplink "%u"'
 super + t
   mondocontrol menu
 super + shift + w

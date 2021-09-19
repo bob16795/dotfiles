@@ -41,7 +41,7 @@ pipi(){
 }
 
 cd() {
-  z $1 && ls && za
+  z "$@" && ls && za
 }
 
 ccd(){
@@ -65,4 +65,11 @@ man(){
     LESS_TERMCAP_ue=$'\e[0m' \
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
+}
+
+lla() {
+  [[ "$1" == "" ]] && echo "adding $PWD" && { linklord -a $PWD; return; }
+  link=$(readlink -f $1)
+  echo "adding $link"
+  linklord -a $link
 }

@@ -15,7 +15,7 @@ dotfiles:
   f_xinitrc:
     src: xinitrc
     dst: ~/.xinitrc
-    chmod: '755'
+    chmod: "755"
   f_init.vim:
     src: config/nvim/init.vim
     dst: ~/.config/nvim/init.vim
@@ -29,7 +29,7 @@ dotfiles:
     src: config/mondo
     dst: ~/.config/mondo
     upignore:
-    - '*'
+      - "*"
   d_mondo_thm:
     src: config/mondo/themes
     dst: ~/.config/mondo/themes
@@ -39,17 +39,19 @@ dotfiles:
   f_user-dirs.dirs:
     src: config/user-dirs.dirs
     dst: ~/.config/user-dirs.dirs
-    chmod: '600'
+    chmod: "600"
   d_colors:
     src: config/nvim/colors
     dst: ~/.config/nvim/colors
   d_vscode-wal:
     src: vscode-oss/extensions/vscode-wal
     dst: ~/.vscode-oss/extensions/vscode-wal
+    upignore:
+      - "*"
   f_config.py:
     src: config/qutebrowser/config.py
     dst: ~/.config/qutebrowser/config.py
-    chmod: '755'
+    chmod: "755"
   f_autoconfig.yml:
     src: config/qutebrowser/autoconfig.yml
     dst: ~/.config/qutebrowser/autoconfig.yml
@@ -65,7 +67,7 @@ dotfiles:
   f_scope.sh:
     src: config/ranger/scope.sh
     dst: ~/.config/ranger/scope.sh
-    chmod: '755'
+    chmod: "755"
   f_monochrome.py:
     src: config/ranger/colorschemes/monochrome.py
     dst: ~/.config/ranger/colorschemes/monochrome.py
@@ -75,7 +77,7 @@ dotfiles:
   f_xresources:
     src: Xresources
     dst: ~/.Xresources
-    chmod: '755'
+    chmod: "755"
   f_profile:
     src: profile
     dst: ~/.profile
@@ -85,7 +87,7 @@ dotfiles:
   f_actions:
     src: config/linklord/actions
     dst: ~/.config/linklord/actions
-    chmod: '600'
+    chmod: "600"
   f_dunst-settings:
     src: config/dunst/dunst-settings
     dst: ~/.config/dunst/dunst-settings
@@ -98,34 +100,40 @@ dotfiles:
   f_settings.json:
     src: config/Code - OSS/User/settings.json
     dst: ~/.config/Code - OSS/User/settings.json
+  f_keybindings.json:
+    src: config/Code - OSS/User/keybindings.json
+    dst: ~/.config/Code - OSS/User/keybindings.json
 profiles:
   default:
     actions:
-    - setup
+      - setup
     dotfiles:
-    - f_xinitrc
-    - f_init.vim
-    - d_bash
-    - f_sxhkdrc
-    - d_mondo_gen
-    - d_mondo_thm
-    - d_scr
-    - f_user-dirs.dirs
-    - d_colors
-    - d_vscode-wal
-    - f_config.py
-    - f_autoconfig.yml
-    - f_commands.py
-    - f_rc.conf
-    - f_rifle.conf
-    - f_scope.sh
-    - f_monochrome.py
-    - f_bashrc
-    - f_xresources
-    - f_profile
-    - f_settings
-    - f_actions
-    - f_dunst-settings
-    - f_picom.conf
-    - f_dcatting.py
-    - f_settings.json
+      - f_xinitrc
+      - f_init.vim
+      - d_bash
+      - f_sxhkdrc
+      - d_mondo_gen
+      - d_mondo_thm
+      - d_scr
+      - f_user-dirs.dirs
+      - d_colors
+      - d_vscode-wal
+      - f_config.py
+      - f_autoconfig.yml
+      - f_commands.py
+      - f_rc.conf
+      - f_rifle.conf
+      - f_scope.sh
+      - f_monochrome.py
+      - f_bashrc
+      - f_xresources
+      - f_profile
+      - f_settings
+      - f_actions
+      - f_dunst-settings
+      - f_picom.conf
+      - f_dcatting.py
+      - f_settings.json
+  prestosilver-pc:
+    dotfiles:
+      - f_keybindings.json

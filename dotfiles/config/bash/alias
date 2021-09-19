@@ -25,7 +25,7 @@ alias shr='. $HOME/.bashrc'
 alias q='exit'
 alias chx='chmod +x'
 
-alias ll='ls -l'
+alias ll='limplink'
 alias la='ls -alh'
 alias ls='ls --color=auto'
 alias lb='ls --color=none'
@@ -64,14 +64,14 @@ alias ls='exa --icons --group-directories-first -I "GPUCache"'
 
 eval "$(zoxide init --cmd z --hook prompt bash)"
 alias cdi='zi'
-alias za='zoxide add $(pwd)'
+alias za='zoxide add "$(pwd)"'
 
 eval "$(thefuck -a rip)"
 
 alias todo='trello show-cards -l todo -i 2>/dev/null -b'
 alias doing='trello assigned-to-me 2>/dev/null -b'
 alias url='git remote get-url origin'
-alias dotdrop='dotdrop --cfg=$HOME/doc/rep/github.com/dotfiles/config.yaml'
+alias dotdrop='dotdrop --cfg=$HOME/doc/rep/github.com/dotfiles/config.yaml -p default'
 diff() {
     git diff --name-only --diff-filter=d | xargs bat --diff
 }
