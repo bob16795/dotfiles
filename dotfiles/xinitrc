@@ -20,6 +20,7 @@ xinput --set-prop "SynPS/2 Synaptics TouchPad" "synaptics Noise Cancellation" 40
 clipmenud &
 filesort &
 dunst &
+itch &
 
 mw sync &
 

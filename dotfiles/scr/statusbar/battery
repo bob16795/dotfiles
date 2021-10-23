@@ -1,15 +1,15 @@
 for battery in /sys/class/power_supply/BAT*; do
   capacity=$(cat "$battery"/capacity) || exit
   if [ "$capacity" -ge 95 ]; then
-    prefix=""
+    prefix=" "
   elif [ "$capacity" -ge 75 ]; then
-    prefix=""
+    prefix=" "
   elif [ "$capacity" -ge 50 ]; then
-    prefix=""
+    prefix=" "
   elif [ "$capacity" -ge 25 ]; then
-    prefix=""
+    prefix=" "
   else
-    prefix=""
+    prefix=" "
   fi 
   acpi -a | grep on-line > /dev/null && prefix=""
   if [[ $1 == "icon" ]]; then

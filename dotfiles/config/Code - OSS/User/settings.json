@@ -4,8 +4,15 @@
     "dashboard.projectData": null,
     "cSpell.userWords": [
         "Leaderboards",
+        "Mathf",
+        "Perlin",
         "Trello",
-        "nessessasary"
+        "blastocysts",
+        "certaincy",
+        "infact",
+        "muls",
+        "nessessasary",
+        "pluripotency"
     ],
     "editor.formatOnSave": true,
     "kite.showWelcomeNotificationOnStartup": false,
@@ -14,5 +21,31 @@
     "omnisharp.useGlobalMono": "always",
     "cSpell.enableFiletypes": [
         "!csharp"
-    ]
+    ],
+    "editor.fontFamily": "'CaskaydiaCovePL Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "terminal.integrated.fontFamily": "'CaskaydiaCovePL Nerd Font'",
+    "debug.console.fontFamily": "'CaskaydiaCovePL Nerd Font'",
+    "editor.inlayHints.fontFamily": "'CaskaydiaCovePL Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.codeLensFontFamily": "'CaskaydiaCovePL Nerd Font'",
+    "scm.inputFontSize": 14,
+    "csharp.referencesCodeLens.enabled": false,
+    "csharp.testsCodeLens.enabled": false,
+    "git.confirmSync": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "emojisense.languages": {
+        "markdown": true,
+        "plaintext": {
+            "markupCompletionsEnabled": false,
+            "emojiDecoratorsEnabled": false
+        },
+        "scminput": true,
+        "git-commit": true,
+        "csharp": true
+    },
 }

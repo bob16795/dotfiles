@@ -13,7 +13,6 @@ HOME = PurePath(os.getenv("HOME"))
 dirs = [[HOME / "dwn/web",     False, True],
         [HOME / "doc/src",     True,  False],
         [HOME / "doc/srt",     True,  True],
-        [HOME / "doc/java",    True,  False],
         [HOME,                 False,  False],
         [HOME / ".config",     True,  False]]
 SORT = {
@@ -33,9 +32,6 @@ dir_actions = [
       "*.mu": "markup_comp %%filename%% %%path%%"
     },
     SORT,
-    {
-      "*.java": "javac %%file%%"
-    },
     {
       "*.png": "mv %%file%% " + str(HOME / "pix/ss")
     },
@@ -107,14 +103,16 @@ def presort():
 
 
 def _main():
-    if (sys.argv[1] == "create"):
-        for path in ["doc", "doc/src", "doc/pdf", "doc/rep", "doc/rep/github.com","dwn", "dwn/web", "mnt", "pix", "pix/memes", "pix/msc", "pix/ss", "pix/wallpapers", "snd", "vid"]:
-            if not os.path.isdir(HOME / path):
-                os.mkdir(HOME / path)
-                print(f"made dir '{path}'")
-            else:
-                print(f"dir '{path}' exists")
-        return
+    try:
+        if (sys.argv[1] == "create"):
+            for path in ["doc", "doc/srt", "doc/src", "doc/pdf", "doc/rep", "doc/rep/github.com","dwn", "dwn/web", "mnt", "pix", "pix/memes", "pix/msc", "pix/ss", "pix/wallpapers", "snd", "vid"]:
+                if not os.path.isdir(HOME / path):
+                    os.mkdir(HOME / path)
+                    print(f"made dir '{path}'")
+                else:
+                    print(f"dir '{path}' exists")
+            return
+    except Exception: pass
     presort()
     for i, dir in enumerate(dirs):
         print("starting thread: " + str(dir[0]))

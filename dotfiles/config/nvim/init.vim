@@ -86,7 +86,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:OmniSharp_server_use_mono = 1
 let g:syntastic_c_checkers = [ 'make']
+let g:syntastic_cs_checkers = [ 'code_checker']
 
 " ctrl p binds
 nnoremap <leader>. :CtrlPTag<cr>
@@ -161,6 +163,7 @@ hi SpellBad cterm=bold ctermfg=red ctermbg=none
 hi SpellCap cterm=bold ctermfg=blue ctermbg=none
 hi VertSplit cterm=none
 hi CursorLine cterm=none
+hi EndOfBuffer ctermfg=black
 let g:minimap_width = 20 
 let g:minimap_auto_start = 1 
 let g:minimap_git_colors = 1 
