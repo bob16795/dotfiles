@@ -16,7 +16,7 @@ super + a
 super + c
   camtoggle
 super + w
-  qutebrowser
+  firefox
 super + shift + s
   scrot -s
 Print

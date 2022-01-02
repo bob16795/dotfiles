@@ -1,51 +1,94 @@
 {
-    "workbench.colorTheme": "vs-wal",
-    "markdown.preview.breaks": true,
-    "dashboard.projectData": null,
-    "cSpell.userWords": [
-        "Leaderboards",
-        "Mathf",
-        "Perlin",
-        "Trello",
-        "blastocysts",
-        "certaincy",
-        "infact",
-        "muls",
-        "nessessasary",
-        "pluripotency"
-    ],
-    "editor.formatOnSave": true,
-    "kite.showWelcomeNotificationOnStartup": false,
+    "window.title": "Code",
+    "workbench.colorTheme": "Nord",
+    "workbench.statusBar.visible": true,
+    "git.confirmSync": false,
+    "breadcrumbs.filePath": "off",
     "git.autofetch": true,
-    "tabnine.experimentalAutoImports": true,
-    "omnisharp.useGlobalMono": "always",
+    "files.associations": {
+        "*.mu": "markdown",
+        "*.pyx": "python",
+        "*.gin2": "properties",
+        "*.gscn": "properties",
+        "*.tmpl": "plaintext"
+    },
+    "editor.quickSuggestions": {
+        "other": true,
+    },
+    "cSpell.userWords": [
+        "Precourt",
+        "Prelab",
+        "mathf",
+        "multicols"
+    ],
+    "window.closeWhenEmpty": false,
+    "files.hotExit": "off",
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "window.menuBarVisibility": "default","themeGenerator.colors": {
+        "background": "#21282d",
+        "foreground": "#fff",
+        "primary": "#327193",
+        "keywords": "#43baba",
+        "functions": "#3fa5c1",
+        "strings": "#b9ecfa",
+        "numbers": "#8789c0",
+        "punctuation": "#494f53",
+        "operators": "#327193",
+        "comment": "#3d4b54",
+        "tags": "#43baba",
+        "attributes": "#3fa5c1",
+        "properties": "#43baba",
+        "builtins": "#b5ca8d",
+        "variables": "#fff",
+        "types": "#3fa5c1"
+    },
+    "workbench.iconTheme": "simple-icons",
+    "dashboard.projectData": null,
+    "editor.fontWeight": "bold",
+    "travisClient.branches": [
+        "master",
+        "future"
+    ],
+    "editor.minimap.renderCharacters": false,
+    "editor.fontSize": 16,
     "cSpell.enableFiletypes": [
+        "!c",
+        "!cpp",
         "!csharp"
     ],
-    "editor.fontFamily": "'CaskaydiaCovePL Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "terminal.integrated.fontFamily": "'CaskaydiaCovePL Nerd Font'",
-    "debug.console.fontFamily": "'CaskaydiaCovePL Nerd Font'",
-    "editor.inlayHints.fontFamily": "'CaskaydiaCovePL Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.codeLensFontFamily": "'CaskaydiaCovePL Nerd Font'",
-    "scm.inputFontSize": 14,
-    "csharp.referencesCodeLens.enabled": false,
-    "csharp.testsCodeLens.enabled": false,
-    "git.confirmSync": false,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "files.exclude": {
+        "**/.vscode": true
     },
-    "security.workspace.trust.untrustedFiles": "open",
+    "editor.tabSize": 2,
+    "workbench.editorAssociations": {
+        "*.bin": "hexEditor.hexedit"
+    },
+    "zenMode.fullScreen": false,
+    "zenMode.hideTabs": false,
+    "editor.formatOnSave": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "editor.detectIndentation": false,
     "editor.smoothScrolling": true,
-    "workbench.list.smoothScrolling": true,
     "editor.cursorSmoothCaretAnimation": true,
-    "emojisense.languages": {
-        "markdown": true,
-        "plaintext": {
-            "markupCompletionsEnabled": false,
-            "emojiDecoratorsEnabled": false
-        },
-        "scminput": true,
-        "git-commit": true,
-        "csharp": true
+    "workbench.list.smoothScrolling": true,
+    "omnisharp.organizeImportsOnFormat": true,
+    "redhat.telemetry.enabled": true,
+    "tabnine.experimentalAutoImports": true,
+    "todo-tree.general.statusBar": "top three",
+    "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+    "todo-tree.general.statusBarClickBehaviour": "cycle",
+    "workbench.sideBar.location": "right",
+    "editor.cursorBlinking": "phase",
+    "[csharp]": {
+      "editor.tabSize": 4,
     },
+    "markdown.preview.breaks": true,
+    "kite.showWelcomeNotificationOnStartup": false,
+    "editor.fontFamily": "'CaskaydiaCovePL Nerd Font'",
+    "editor.suggest.showReferences": false,
+    
 }

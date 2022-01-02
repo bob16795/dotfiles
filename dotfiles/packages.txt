@@ -46,7 +46,8 @@ P openssh
 P pamixer
 P patch
 P pavucontrol
-P picom
+P meson
+P picom-ibhagwan-git
 P pkgconf
 P pulseaudio
 P python-neovim-git
@@ -130,6 +131,7 @@ P oomox
 P ttf-kascadia
 P ttf-twemoji-color
 P exa
+P python-pulsectl
 G bob16795/budwm
 G bob16795/st
 G bob16795/dmenu
