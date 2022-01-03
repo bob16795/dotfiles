@@ -28,6 +28,4 @@ fi
 killall pulseaudio
 
 # opam configuration
-test -r /home/john/.opam/opam-init/init.sh && . /home/john/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-
-export MGFXC_WINE_PATH=/home/john/.winemonogame
+test -r $HOME/.opam/opam-init/init.sh && . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

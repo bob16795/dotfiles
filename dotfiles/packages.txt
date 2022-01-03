@@ -47,7 +47,7 @@ P pamixer
 P patch
 P pavucontrol
 P meson
-P picom-ibhagwan-git
+P picom-jonaburg-git
 P pkgconf
 P pulseaudio
 P python-neovim-git

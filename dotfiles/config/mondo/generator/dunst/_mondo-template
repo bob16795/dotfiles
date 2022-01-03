@@ -36,7 +36,7 @@
     #  * anything else will be interpreted as a X color.
     separator_color = frame
 
-    font = %%terminalfontface1%% 10
+    font = CaskaydiaCovePL Nerd Font 12
 
     # Paths to default icons.
     icon_path = $HOME/.icons/%%theme%%/16/status:/home/john/.icons/%%theme%%/16/devices/
