@@ -132,6 +132,7 @@ P ttf-kascadia
 P ttf-twemoji-color
 P exa
 P python-pulsectl
+P themix-icons-numix-git
 G bob16795/budwm
 G bob16795/st
 G bob16795/dmenu
