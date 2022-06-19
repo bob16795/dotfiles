@@ -1,43 +1,41 @@
 " Set this to 1 to use ultisnips for snippet handling
 let s:using_snippets = 1
 " auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'preservim/nerdtree'
     Plug 'jiangmiao/auto-pairs'
     Plug 'Shougo/neocomplcache.vim'
-    Plug 'zah/nim.vim'
+    Plug 'alaviss/nim.nvim'
     Plug 'scrooloose/syntastic'
     Plug 'farmergreg/vim-lastplace'
     Plug 'airblade/vim-gitgutter'
     Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'voldikss/vim-floaterm'
     Plug 'vimwiki/vimwiki'
     Plug 'bob16795/markup.vim'
     Plug 'vim-scripts/LargeFile'
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }    
     Plug 'dradtke/VIP'
     Plug 'Shougo/neocomplcache'
+    Plug 'dracula/vim', {'name': 'dracula'}
     Plug 'noahfrederick/vim-noctu'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'ojroques/vim-scrollstatus'
     Plug 'idbrii/vim-unityengine'
     Plug 'OmniSharp/omnisharp-vim'  
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'nanotee/zoxide.vim'
+    Plug 'akinsho/toggleterm.nvim', {'tag': 'v1.*'} 
+    Plug 'mkitt/tabline.vim'
+    Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 
 syntax enable
 syntax on
 set nocompatible
+
+call luaeval('require("toggleterm").setup()')
 
 
 filetype plugin indent on
@@ -75,7 +73,7 @@ set number relativenumber
 set numberwidth=2
 " theme
 set t_Co=256
-colorscheme mondo
+colorscheme dracula
 " hi PreProc ctermfg=white
 
 " vimwiki config
@@ -92,6 +90,7 @@ let g:syntastic_cs_checkers = [ 'code_checker']
 
 " ctrl p binds
 nnoremap <leader>. :CtrlPTag<cr>
+map <F11> :let g:neovide_fullscreen=1<cr>
 
 " nim ctags
 au User asyncomplete_setup call asyncomplete#register_source({
@@ -157,13 +156,14 @@ let g:OmniSharp_highlight_groups = {
 \ 'ExcludedCode': 'NonText'
 \}
 
-map <F5> :!dotnet run<Return>
-set spell
+map <F5> :TermExec cmd='./run.sh'<Return>
 hi SpellBad cterm=bold ctermfg=red ctermbg=none
 hi SpellCap cterm=bold ctermfg=blue ctermbg=none
 hi VertSplit cterm=none
 hi CursorLine cterm=none
 hi EndOfBuffer ctermfg=black
+hi Normal ctermbg=none
+hi DraculaWinSeparator ctermbg=none
 let g:minimap_width = 20 
 let g:minimap_auto_start = 1 
 let g:minimap_git_colors = 1 
@@ -194,6 +194,7 @@ let g:startify_session_autoload    = 1
 let g:startify_session_persistence = 1
 let g:startify_session_delete_buffers = 1
 nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>c :ToggleTerm<CR>
 map <f9> :make<cr>
 map <f8> :make clean<cr>
 " Start NERDTree when Vim is started without file arguments.
@@ -204,3 +205,21 @@ if filereadable(expand('project.vim'))
   exe 'source project.vim'
 endif
 
+set guifont=Cascadia\ Code:h12
+set clipboard+=unnamedplus
+let g:clipboard = {
+          \   'name': 'win32yank-wsl',
+          \   'copy': {
+          \      '+': 'win32yank.exe -i --crlf',
+          \      '*': 'win32yank.exe -i --crlf',
+          \    },
+          \   'paste': {
+          \      '+': 'win32yank.exe -o --lf',
+          \      '*': 'win32yank.exe -o --lf',
+          \   },
+          \   'cache_enabled': 0,
+          \ }
+
+let NERDTreeMapOpenInTab='\r'
+let g:neovide_transparency=0.8
+command! W  write
