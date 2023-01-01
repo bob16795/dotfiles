@@ -45,7 +45,7 @@ let g:colors_name="mondo"
 
 "hi Cursor		
 "hi CursorIM	
-hi Directory ctermfg=8
+hi Directory ctermfg=252
 "hi DiffAdd		
 "hi DiffChange	
 "hi DiffDelete	
@@ -77,7 +77,7 @@ hi User1 ctermbg=252 ctermfg=253
 "hi Tooltip		
 
 " syntax highlighting groups
-hi Comment cterm=italic ctermfg=8
+hi Comment cterm=italic ctermfg=252
 hi Constant ctermfg=11
 hi Identifier ctermfg=11	
 "hi Statement	
@@ -93,3 +93,5 @@ hi SyntasticErrorLine ctermbg=red
 hi SyntasticErrorSign ctermbg=8 ctermfg=red
 hi SyntasticWarningLine ctermbg=yellow
 hi SyntasticWarningSign ctermbg=8 ctermfg=yellow
+hi String ctermfg=green
+

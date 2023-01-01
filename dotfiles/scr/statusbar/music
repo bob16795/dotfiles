@@ -4,7 +4,7 @@ case $1 in
   3) spt pb -n; exit;;
 esac
 
-#spt pb
+spt pb -f "%t" || printf "\xf2No Music"
 #[[ "$(pgrep spotify)" == "" ]] || { eval "$(spotify-cli now-playing)" \
 #  && printf "  $spotify_artist_name - $spotify_track_name" \
 #  | tr -d '\n' \
@@ -26,4 +26,3 @@ esac
 #  | sed -e "s/\\[paused\\].*/  /g;s/\\[playing\\].*/  /g" \
 #  | tr -d '\n' | sed "s/\;//g" \
 #  | awk -v len=40 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }'
-#echo " "

@@ -3,7 +3,7 @@ case $1 in
   "1") pamixer --default-source -t ; exit ;;
   "icon")
     if [ "$(pamixer --default-source --get-mute)" == "true" ]; then
-      printf "\xf2\n"
+      printf "\n"
     else
       printf "\xf1\n"
     fi
@@ -14,7 +14,7 @@ esac
 vol=$(pamixer --default-source --get-volume)
 
 if [ "$(pamixer --default-source --get-mute)" == "true" ]; then
-  printf "\xf2 $vol\n"
+  printf " $vol\n"
   exit
 fi
-printf "\xf1 %s\n" $vol
+printf "\xf2 %s\n" $vol

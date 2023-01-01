@@ -74,6 +74,7 @@ dotfiles:
   f_bashrc:
     src: bashrc
     dst: ~/.bashrc
+    chmod: '755'
   f_xresources:
     src: Xresources
     dst: ~/.Xresources
@@ -103,6 +104,9 @@ dotfiles:
   f_picom.conf:
     src: config/picom.conf
     dst: ~/.config/picom.conf
+  d_doom.d:
+    src: doom.d
+    dst: ~/.doom.d
 profiles:
   default:
     actions:
@@ -137,3 +141,4 @@ profiles:
   prestosilver-pc:
     dotfiles:
     - f_keybindings.json
+    - d_doom.d

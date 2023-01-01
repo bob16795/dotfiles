@@ -4,7 +4,7 @@ super + d
 super + shift + d
   j4-dmenu-desktop --dmenu 'dmenu -p "DRun:"'
 super + l
-  linklord -x 'limplink "%u"'
+  linklord -x 'gurl "%u"'
 super + t
   mondocontrol menu
 super + shift + w
@@ -16,7 +16,7 @@ super + a
 super + c
   camtoggle
 super + w
-  firefox
+  qutebrowser
 super + shift + s
   scrot -s
 Print

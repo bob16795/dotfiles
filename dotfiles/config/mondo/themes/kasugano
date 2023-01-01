@@ -1,37 +1,40 @@
-fg #bdae93
-bg #000000
+fg #ffffff
+bg #1b1b1b
 
-base00 #252323
-base01 #8f3f71
-base02 #427b58
+base00 #3D3D3D
+base01 #4D4D4D
+base02 #8f3f71
 base03 #32302F
 
-base0 #b57614
-base1 #bdae93
-base2 #ebdbb2
-base3 #f9f5d7
+base0 #E54F5D
+base1 #9A1C3E
+base2 #fefefe
+base3 #FFFFFF
 
-red #cc241d
-ora #9d0006
-grn #98971a
-ylw #d79921
-blu #458588
-mag #b16286
-vio #076678
-cyn #689d6a
+red #899AFF
+ora #52AD91
+grn #3EA290
+ylw #B0EAD9
+blu #31658C
+mag #596196
+vio #8292B2
+cyn #95A7CC
 
 fg1         fg
 fg2         base2
 bg1         bg
 bg2         base03
 
-act1        #010081
-act2        #C0C0C0
-act3        #010081
+dark1       base00
+light1      base3
 
-ina1        #010081
-ina2        #000000
-ina3        #010081
+act1        base0
+act2        base3
+act3        base0
+
+ina1        base1
+ina2        fg
+ina3        base1
 
 sel1     base00
 sel2     base3

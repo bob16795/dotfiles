@@ -1,6 +1,6 @@
 {
     "window.title": "Code",
-    "workbench.colorTheme": "Nord",
+    "workbench.colorTheme": "vs-wal",
     "workbench.statusBar.visible": true,
     "git.confirmSync": false,
     "breadcrumbs.filePath": "off",
@@ -67,7 +67,6 @@
     },
     "zenMode.fullScreen": false,
     "zenMode.hideTabs": false,
-    "editor.formatOnSave": true,
     "[jsonc]": {
         "editor.defaultFormatter": "HookyQR.beautify"
     },
@@ -81,7 +80,6 @@
     "todo-tree.general.statusBar": "top three",
     "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
     "todo-tree.general.statusBarClickBehaviour": "cycle",
-    "workbench.sideBar.location": "right",
     "editor.cursorBlinking": "phase",
     "[csharp]": {
       "editor.tabSize": 4,
@@ -90,5 +88,8 @@
     "kite.showWelcomeNotificationOnStartup": false,
     "editor.fontFamily": "'CaskaydiaCovePL Nerd Font'",
     "editor.suggest.showReferences": false,
+    "task.autoDetect": "off",
+    "nim.enableNimsuggest": false,
+    "nim.provider": "lsp",
     
 }

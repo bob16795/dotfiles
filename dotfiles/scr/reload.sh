@@ -9,6 +9,7 @@ xsetroot -name "fsignal:1"
 
 killall -v -USR1 st cava
 killall -v dunst
+killall python3
 killall xeyes && xeyes +shape -outline "$(mondo -c bg)" &
 
 dunst -q &

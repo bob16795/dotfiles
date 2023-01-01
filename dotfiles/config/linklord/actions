@@ -1,3 +1,4 @@
+exec gurl %u 
 exec limplink %u 
 print %t - %u
 exec qutebrowser %u 

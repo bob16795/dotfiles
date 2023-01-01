@@ -15,4 +15,4 @@ if [ "$(pamixer --get-mute)" == "true" ]; then
   printf "\xf2 $vol\n"
   exit
 fi
-printf "\xf1 %s\n" $vol
+printf " %s\n" $vol

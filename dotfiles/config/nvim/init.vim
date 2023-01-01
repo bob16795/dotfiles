@@ -3,14 +3,14 @@ let s:using_snippets = 1
 " auto-install vim-plug
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
+    
+    Plug 'glepnir/dashboard-nvim' 
     Plug 'preservim/nerdtree'
     Plug 'jiangmiao/auto-pairs'
     Plug 'Shougo/neocomplcache.vim'
     Plug 'alaviss/nim.nvim'
     Plug 'scrooloose/syntastic'
     Plug 'farmergreg/vim-lastplace'
-    Plug 'airblade/vim-gitgutter'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'vimwiki/vimwiki'
     Plug 'bob16795/markup.vim'
@@ -25,18 +25,190 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'idbrii/vim-unityengine'
     Plug 'OmniSharp/omnisharp-vim'  
     Plug 'nanotee/zoxide.vim'
-    Plug 'akinsho/toggleterm.nvim', {'tag': 'v1.*'} 
-    Plug 'mkitt/tabline.vim'
+    "Plug 'akinsho/toggleterm.nvim', {'tag': 'v1.*'} 
     Plug 'wakatime/vim-wakatime'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'folke/todo-comments.nvim'
+    Plug 'onsails/lspkind.nvim'
+    Plug 'sainnhe/everforest'
+    Plug 'arcticicestudio/nord-vim'
+
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    Plug 'lambdalisue/battery.vim'
+    Plug 'vim-test/vim-test'
+    Plug 'vim-scripts/OmniCppComplete'
+    Plug 'akinsho/bufferline.nvim'
+    Plug 'kyazdani42/nvim-web-devicons'
+
+    Plug 'nvim-telescope/telescope.nvim'
+
+    Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+    Plug 'hrsh7th/nvim-cmp'
+
+    Plug 'pwntester/octo.nvim'
+    "Plug 'yggdroot/indentline'
+    Plug 'andweeb/presence.nvim'
+    Plug 'junegunn/goyo.vim'
+    Plug 'yoshio15/vim-trello', { 'branch': 'main' }
+
+    Plug 'MarcWeber/vim-addon-mw-utils'
+    Plug 'tomtom/tlib_vim'
+    Plug 'natecraddock/sessions.nvim'
 
 call plug#end()
+
+let g:syntastic_cpp_include_dirs = ["library"]
 
 syntax enable
 syntax on
 set nocompatible
+set completeopt=longest,menuone
 
-call luaeval('require("toggleterm").setup()')
+lua << EOF
+local db = require("dashboard")
 
+db.custom_center = {
+  {icon = '  ',
+  desc = 'Recently latest session                  ',
+  shortcut = 'SPC s l',
+  action ='SessionsLoad'},
+  {icon = '  ',
+  desc = 'Recently opened files                   ',
+  action =  'DashboardFindHistory',
+  shortcut = 'SPC f h'},
+  {icon = '  ',
+  desc = 'Find  File                              ',
+  action = 'Telescope find_files find_command=rg,--hidden,--files',
+  shortcut = 'SPC f f'},
+  {icon = '  ',
+  desc ='File Browser                            ',
+  action =  'Telescope file_browser',
+  shortcut = 'SPC f b'},  
+}
+require("sessions").setup{
+    session_filepath = "/home/john/.config/nvim/session",
+}
+--require("toggleterm").setup()
+require("telescope").setup()
+require("octo").setup()
+require("todo-comments").setup()
+local cmp = require("cmp")
+cmp.setup({
+ mapping = {
+   ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+   ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+   ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+   ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+   ['<C-e>'] = cmp.mapping({
+     i = cmp.mapping.abort(),
+     c = cmp.mapping.close(),
+   }),
+   ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+ },
+ sources = {
+ 	{ name = 'cmp_tabnine' },
+ },
+})
+local tabnine = require('cmp_tabnine.config')
+tabnine:setup({
+	max_lines = 1000;
+	max_num_results = 20;
+	sort = true;
+	run_on_every_keystroke = true;
+	snippet_placeholder = '..';
+	ignored_file_types = { -- default is not to ignore
+		-- uncomment to ignore in lua:
+		-- lua = true
+	};
+	show_prediction_strength = false;
+})
+require("bufferline").setup{
+  options = {
+    offsets = {
+      {
+        filetype = "nerdtree",
+        text = function()
+          return vim.fn.getcwd()
+        end,
+        highlight = "Directory",
+        text_align = "left"
+      },
+    },
+    show_buffer_icons = true,
+    separator_style = "slant",
+  },
+  highlights = {
+    fill = {
+      ctermbg = 0,
+      ctermfg = 255,
+    },
+    background = {
+      ctermbg = 254,
+      ctermfg = 255,
+    },
+    separator = {
+      ctermbg = 254,
+      ctermfg = 0,
+    },
+    separator_selected = {
+      ctermbg = 252,
+      ctermfg = 0,
+    },
+    separator_visible = {
+      ctermbg = 254,
+      ctermfg = 0,
+    },
+    buffer_selected = {
+      ctermbg = 252,
+      ctermfg = 253,
+    },
+    buffer_visible = {
+      ctermbg = 254,
+      ctermfg = 255,
+    },
+    close_button = {
+      ctermbg = 254,
+      ctermfg = 255,
+    },
+    indicator_selected = {
+      ctermbg = 252,
+      ctermfg = 252,
+    },
+    close_button_selected = {
+      ctermbg = 252,
+      ctermfg = 253,
+    },
+    close_button_visible = {
+      ctermbg = 254,
+      ctermfg = 255,
+    },
+  },
+}
+require("presence"):setup({
+    -- General options
+    auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
+    neovim_image_text   = "The One True Text Editor", -- Text displayed when hovered over the Neovim image
+    main_image          = "neovim",                   -- Main image display (either "neovim" or "file")
+    client_id           = "793271441293967371",       -- Use your own Discord application client id (not recommended)
+    log_level           = nil,                        -- Log messages at or above this level (one of the following: "debug", "info", "warn", "error")
+    debounce_timeout    = 10,                         -- Number of seconds to debounce events (or calls to `:lua package.loaded.presence:update(<filename>, true)`)
+    enable_line_number  = true,                      -- Displays the current line number instead of the current project
+    blacklist           = {},                         -- A list of strings or Lua patterns that disable Rich Presence if the current file name, path, or workspace matches
+    buttons             = true,                     -- Configure Rich Presence button(s), either a boolean to enable/disable, a static table (`{{ label = "<label>", url = "<url>" }, ...}`, or a function(buffer: string, repo_url: string|nil): table)
+    file_assets         = {},                         -- Custom file asset definitions keyed by file names and extensions (see default config at `lua/presence/file_assets.lua` for reference)
+
+    -- Rich Presence text options
+    editing_text        = "Editing %s",               -- Format string rendered when an editable file is loaded in the buffer (either string or function(filename: string): string)
+    file_explorer_text  = "Browsing %s",              -- Format string rendered when browsing a file explorer (either string or function(file_explorer_name: string): string)
+    git_commit_text     = "Committing changes",       -- Format string rendered when committing changes in git (either string or function(filename: string): string)
+    plugin_manager_text = "Managing plugins",         -- Format string rendered when managing plugins (either string or function(plugin_manager_name: string): string)
+    reading_text        = "Reading %s",               -- Format string rendered when a read-only or unmodifiable file is loaded in the buffer (either string or function(filename: string): string)
+    workspace_text      = "Working on %s",            -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
+    line_number_text    = "Line %s out of %s",        -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
+})
+EOF
 
 filetype plugin indent on
 " set leader to space
@@ -53,6 +225,9 @@ set laststatus=2
 set mouse=a
 " apply markdown formatting to markup files
 autocmd BufNewFile,BufRead *.mu set ft=markup
+autocmd filetype cpp set tabstop=4
+autocmd filetype cpp set softtabstop=4
+autocmd filetype cpp set shiftwidth=4
 " status line
 set statusline =
 set statusline +=%1*\ %n\ %*            "buffer number
@@ -73,7 +248,7 @@ set number relativenumber
 set numberwidth=2
 " theme
 set t_Co=256
-colorscheme dracula
+colorscheme mondo
 " hi PreProc ctermfg=white
 
 " vimwiki config
@@ -98,6 +273,14 @@ au User asyncomplete_setup call asyncomplete#register_source({
     \ 'whitelist': ['nim'],
     \ 'completor': {opt, ctx -> nim#suggest#sug#GetAllCandidates({start, candidates -> asyncomplete#complete(opt['name'], ctx, start, candidates)})}
     \ })
+"    
+
+let s:nimlspexecutable = "nimlsp"
+au User lsp_setup call lsp#register_server({
+\ 'name': 'nimlsp',
+\ 'cmd': {server_info->[s:nimlspexecutable]},
+\ 'whitelist': ['nim'],
+\ })
 
 let g:tagbar_type_nim = {
     \ 'ctagstype': 'nim',
@@ -157,29 +340,38 @@ let g:OmniSharp_highlight_groups = {
 \}
 
 map <F5> :TermExec cmd='./run.sh'<Return>
-hi SpellBad cterm=bold ctermfg=red ctermbg=none
-hi SpellCap cterm=bold ctermfg=blue ctermbg=none
-hi VertSplit cterm=none
+map <F6> :!./run.sh<Return>
+hi SpellBad cterm=bold ctermfg=red ctermbg=0
+hi SpellCap cterm=bold ctermfg=blue ctermbg=0
+hi VertSplit cterm=bold
 hi CursorLine cterm=none
 hi EndOfBuffer ctermfg=black
-hi Normal ctermbg=none
-hi DraculaWinSeparator ctermbg=none
+hi Normal ctermbg=0
+hi Statement ctermfg=darkgreen
+hi Identifier ctermfg=none cterm=none
+hi nimSugGlobalVar ctermfg=red
+hi LineNr ctermfg=none
+hi SignColumn ctermbg=none ctermfg=darkblue
+hi TodoSignTODO ctermfg=darkblue
+hi Visual ctermbg=252 ctermfg=253
+hi Title ctermfg=none
+hi nimInclude ctermfg=3
+
 let g:minimap_width = 20 
 let g:minimap_auto_start = 1 
 let g:minimap_git_colors = 1 
 let g:deoplete#enable_at_startup = 1
+let g:colorizer_fgcontrast=1
 
 autocmd FileType markup set makeprg=markup_comp\ %
 
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
 
+" Use tab for trigger completion with characters ahead and navigate.
+" other plugin before putting this into your config.
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -193,33 +385,44 @@ let g:startify_update_oldfiles     = 1
 let g:startify_session_autoload    = 1
 let g:startify_session_persistence = 1
 let g:startify_session_delete_buffers = 1
+set fillchars+=vert:▏
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>c :ToggleTerm<CR>
 map <f9> :make<cr>
 map <f8> :make clean<cr>
 " Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 if filereadable(expand('project.vim'))
   exe 'source project.vim'
 endif
 
-set guifont=Cascadia\ Code:h12
-set clipboard+=unnamedplus
-let g:clipboard = {
-          \   'name': 'win32yank-wsl',
-          \   'copy': {
-          \      '+': 'win32yank.exe -i --crlf',
-          \      '*': 'win32yank.exe -i --crlf',
-          \    },
-          \   'paste': {
-          \      '+': 'win32yank.exe -o --lf',
-          \      '*': 'win32yank.exe -o --lf',
-          \   },
-          \   'cache_enabled': 0,
-          \ }
+set guifont=Cascadia\ Code\ PL:h10
 
 let NERDTreeMapOpenInTab='\r'
 let g:neovide_transparency=0.8
 command! W  write
+
+function! SynStack ()
+    for i1 in synstack(line("."), col("."))
+        let i2 = synIDtrans(i1)
+        let n1 = synIDattr(i1, "name")
+        let n2 = synIDattr(i2, "name")
+        echo n1 "->" n2
+    endfor
+endfunction
+map gm :call SynStack()<CR>
+
+let g:airline_theme='mondo'
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
+let g:indent_guides_enable_on_vim_startup = 1
+let g:vimTrelloApiKey = '55d570771121c20fc66ac091b7246f94'
+let g:vimTrelloToken = '857c73247f86821fb99981d2fa88976552ae7ab140ab57b3a85961368e32d7cb'
+set scrolljump=0
+autocmd BufRead,BufNewFile *.slm set filetype=slim
+if exists("g:neovide")
+  colorscheme dracula
+endif
+
+let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
