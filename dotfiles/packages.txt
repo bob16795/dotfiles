@@ -126,6 +126,7 @@ P xterm
 P yay
 P zathura
 P zathura-pdf-mupdf
+P fish
 P zoxide
 P oomox
 P ttf-kascadia
@@ -134,6 +135,7 @@ P exa
 P python-pulsectl
 P themix-icons-numix-git
 P linklord
+P emacs
 G bob16795/budwm
 G bob16795/st
 G bob16795/dmenu

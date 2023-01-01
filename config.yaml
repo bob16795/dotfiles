@@ -107,6 +107,10 @@ dotfiles:
   d_doom.d:
     src: doom.d
     dst: ~/.doom.d
+  d_fish:
+    src: config/fish
+    dst: ~/.config/fish
+    chmod: '700'
 profiles:
   default:
     actions:
@@ -138,7 +142,6 @@ profiles:
     - f_dcatting.py
     - f_settings.json
     - f_picom.conf
-  prestosilver-pc:
-    dotfiles:
     - f_keybindings.json
     - d_doom.d
+    - d_fish

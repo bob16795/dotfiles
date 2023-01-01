@@ -49,3 +49,7 @@ mondo -fg all
 mondo -a nord
 
 bwp -w {{@@ _dotdrop_dotpath @@}}/wallpaper.jpg
+
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
+
+~/.emacs.d/bin/doom install
