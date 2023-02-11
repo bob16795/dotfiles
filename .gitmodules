@@ -3,4 +3,4 @@
 	url = https://github.com/deadc0de6/dotdrop.git
 [submodule "dotfiles/doom.d"]
   path = dotfiles/doom.d
-	url = git@github.com:bob16795/doom-emacs
+	url = https://github.com/bob16795/doom-emacs

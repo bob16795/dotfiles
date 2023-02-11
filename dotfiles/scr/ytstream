@@ -1,0 +1,2 @@
+key=wed1-ksq5-q0q9-k5sc-189v
+ffmpeg -framerate 30 -video_size 1920x1080 -f x11grab -i :0.0 -vf format=yuv420p -c:a aac -b:a 128k -f flv rtmp://a.rtmp.youtube.com/live2/$key

@@ -10,7 +10,7 @@ spt pb -f "%t" || printf "\xf2No Music"
 #  | tr -d '\n' \
 #  | awk -v len=40 '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print; }'; exit; }
 #
-#[[ "$(mpc current)" == "" ]] && { printf "\xf1 no music "; exit;}
+# { printf "\xf1 no music "; exit;}
 #
 ##[[ $(mpc status) == *'[playing]'* ]] || printf "\xf2"
 ##[[ $(mpc status) == *'[playing]'* ]] && printf "\xf1"

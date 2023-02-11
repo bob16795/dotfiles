@@ -61,7 +61,6 @@
     "files.exclude": {
         "**/.vscode": true
     },
-    "editor.tabSize": 2,
     "workbench.editorAssociations": {
         "*.bin": "hexEditor.hexedit"
     },
@@ -91,5 +90,10 @@
     "task.autoDetect": "off",
     "nim.enableNimsuggest": false,
     "nim.provider": "lsp",
+    "zig.revealOutputChannelOnFormattingError": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.formatOnSave": true,
+    "editor.fontLigatures": true,
+    "csharp.referencesCodeLens.enabled": false,
     
 }

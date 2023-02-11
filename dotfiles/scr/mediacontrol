@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pgrep spotify && { spt pb --$*; xsetroot -name "fsignal:2"; exit; }
+{ spt pb --$*; xsetroot -name "fsignal:2"; exit; }
 
 case $1 in
 

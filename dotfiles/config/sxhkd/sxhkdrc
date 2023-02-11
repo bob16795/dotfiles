@@ -171,16 +171,16 @@ shift + XF86AudioMute
 shift + XF86Audio{Raise,Lower}Volume
   pamixer --default-source -{i,d} 5
 XF86Audio{Next,Prev}
-  mediacontrol {next,prev}
+  mediacontrol {next,previous}
 XF86MonBrightness{Up,Down}
   brightness-watcher 5%{+,-}
 
 #media
 super + {_,shift +} bracketright
-  mpc seek +{10,120}
+  spt pb --seek +{10,120}
 super + {_,shift +} bracketleft
-  mpc seek -{10,120}
+  spt pb --seek -{10,120}
 XF86Audio{Pause,Play,Stop}
   mediacontrol toggle
 XF86Audio{Rewind,Forward}
-  mpc seek {-,+}10
+  spt pb --seek {-,+}10
