@@ -10,7 +10,8 @@
         "*.pyx": "python",
         "*.gin2": "properties",
         "*.gscn": "properties",
-        "*.tmpl": "plaintext"
+        "*.tmpl": "plaintext",
+        "*.eon": "plaintext"
     },
     "editor.quickSuggestions": {
         "other": true,
@@ -26,7 +27,7 @@
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
-    "window.menuBarVisibility": "default","themeGenerator.colors": {
+    "window.menuBarVisibility": "toggle","themeGenerator.colors": {
         "background": "#21282d",
         "foreground": "#fff",
         "primary": "#327193",
@@ -71,12 +72,12 @@
     },
     "editor.detectIndentation": false,
     "editor.smoothScrolling": true,
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "workbench.list.smoothScrolling": true,
     "omnisharp.organizeImportsOnFormat": true,
     "redhat.telemetry.enabled": true,
     "tabnine.experimentalAutoImports": true,
-    "todo-tree.general.statusBar": "top three",
+    "todo-tree.general.statusBar": "current file",
     "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
     "todo-tree.general.statusBarClickBehaviour": "cycle",
     "editor.cursorBlinking": "phase",
@@ -85,15 +86,26 @@
     },
     "markdown.preview.breaks": true,
     "kite.showWelcomeNotificationOnStartup": false,
-    "editor.fontFamily": "'CaskaydiaCovePL Nerd Font'",
+    "editor.fontFamily": "'Cascadia Code PL'",
     "editor.suggest.showReferences": false,
     "task.autoDetect": "off",
     "nim.enableNimsuggest": false,
     "nim.provider": "lsp",
-    "zig.revealOutputChannelOnFormattingError": false,
     "security.workspace.trust.untrustedFiles": "open",
     "editor.formatOnSave": true,
     "editor.fontLigatures": true,
     "csharp.referencesCodeLens.enabled": false,
-    
+    "editor.minimap.enabled": false,
+    "discord.detailsEditing": "Editing {file_name}, {total_lines} lines of code!!!",
+    "discord.lowerDetailsEditing": "Folder: {workspace_folder}",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.matchBrackets": "never",
+    "zig.revealOutputChannelOnFormattingError": false,
+    "zig.zls.path": "/home/john/.config/Code - OSS/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+    "zig.zls.enableSnippets": false,
+    "terminal.integrated.gpuAcceleration": "off",
+    "editor.tokenColorCustomizations": {
+        "comments": {"fontStyle": "italic"}
+    },
+    "zig.zls.enableInlayHints": false,
 }

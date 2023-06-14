@@ -4,7 +4,8 @@ case $1 in
   3) spt pb -n; exit;;
 esac
 
-spt pb -f "%t" || printf "\xf2No Music"
+#spt pb -f "%s %t" ||
+ printf "No Music"
 #[[ "$(pgrep spotify)" == "" ]] || { eval "$(spotify-cli now-playing)" \
 #  && printf "  $spotify_artist_name - $spotify_track_name" \
 #  | tr -d '\n' \

@@ -16,7 +16,7 @@ super + a
 super + c
   camtoggle
 super + w
-  qutebrowser
+  firefox
 super + shift + s
   scrot -s
 Print
@@ -170,8 +170,8 @@ shift + XF86AudioMute
   pamixer --default-source -t
 shift + XF86Audio{Raise,Lower}Volume
   pamixer --default-source -{i,d} 5
-XF86Audio{Next,Prev}
-  mediacontrol {next,previous}
+# XF86Audio{Next,Prev}
+#   mediacontrol {next,previous}
 XF86MonBrightness{Up,Down}
   brightness-watcher 5%{+,-}
 
@@ -180,7 +180,7 @@ super + {_,shift +} bracketright
   spt pb --seek +{10,120}
 super + {_,shift +} bracketleft
   spt pb --seek -{10,120}
-XF86Audio{Pause,Play,Stop}
-  mediacontrol toggle
-XF86Audio{Rewind,Forward}
-  spt pb --seek {-,+}10
+# XF86Audio{Pause,Play,Stop}
+#   mediacontrol toggle
+# XF86Audio{Rewind,Forward}
+#   spt pb --seek {-,+}10

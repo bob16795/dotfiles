@@ -1,0 +1,13 @@
+#+TITLE: Prestosilvers Dotfiles
+#+AUTHOR: Prestosilver
+
+* INSTALL
+** Install Arch
+** Clone the repo
+** Use dotdrop with "default" profile
+
+* BUDWM
+#+ATTR_HTML: :width 300px
+[[./assets/wm.png]]
+
+* SXHKD

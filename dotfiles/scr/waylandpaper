@@ -1,0 +1,3 @@
+#!/bin/bash
+killall -KILL swaybg
+swaybg --image=$HOME/pix/wallpapers/currentwall --mode=fill &

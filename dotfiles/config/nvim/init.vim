@@ -18,6 +18,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }    
     Plug 'dradtke/VIP'
     Plug 'Shougo/neocomplcache'
+    Plug 'neovim/nvim-lspconfig'
     Plug 'dracula/vim', {'name': 'dracula'}
     Plug 'noahfrederick/vim-noctu'
     Plug 'terryma/vim-multiple-cursors'
@@ -25,6 +26,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'idbrii/vim-unityengine'
     Plug 'OmniSharp/omnisharp-vim'  
     Plug 'nanotee/zoxide.vim'
+    Plug 'nvim-neorg/neorg'
     "Plug 'akinsho/toggleterm.nvim', {'tag': 'v1.*'} 
     Plug 'wakatime/vim-wakatime'
     Plug 'nvim-lua/plenary.nvim'
@@ -32,30 +34,30 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'onsails/lspkind.nvim'
     Plug 'sainnhe/everforest'
     Plug 'arcticicestudio/nord-vim'
+    Plug 'airblade/vim-gitgutter'
 
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    "Plug 'vim-airline/vim-airline'
+    "Plug 'vim-airline/vim-airline-themes'
 
     Plug 'lambdalisue/battery.vim'
     Plug 'vim-test/vim-test'
     Plug 'vim-scripts/OmniCppComplete'
-    Plug 'akinsho/bufferline.nvim'
+    "Plug 'akinsho/bufferline.nvim'
     Plug 'kyazdani42/nvim-web-devicons'
 
     Plug 'nvim-telescope/telescope.nvim'
 
-    Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-    Plug 'hrsh7th/nvim-cmp'
 
     Plug 'pwntester/octo.nvim'
     "Plug 'yggdroot/indentline'
     Plug 'andweeb/presence.nvim'
     Plug 'junegunn/goyo.vim'
     Plug 'yoshio15/vim-trello', { 'branch': 'main' }
-
     Plug 'MarcWeber/vim-addon-mw-utils'
     Plug 'tomtom/tlib_vim'
-    Plug 'natecraddock/sessions.nvim'
+    "Plug 'natecraddock/sessions.nvim'
+    Plug 'ziglang/zig.vim'
+    Plug 'ahmedkhalf/project.nvim'
 
 call plug#end()
 
@@ -64,9 +66,45 @@ let g:syntastic_cpp_include_dirs = ["library"]
 syntax enable
 syntax on
 set nocompatible
-set completeopt=longest,menuone
+"set completeopt=longest,menuone
 
 lua << EOF
+
+require("project_nvim").setup{}
+local lspconfig = require('lspconfig')
+lspconfig.zls.setup {}
+-- Use LspAttach autocommand to only map the following keys
+-- after the language server attaches to the current buffer
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  callback = function(ev)
+    -- Enable completion triggered by <c-x><c-o>
+    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+
+    -- Buffer local mappings.
+    -- See `:help vim.lsp.*` for documentation on any of the below functions
+    local opts = { buffer = ev.buf }
+    vim.keymap.set('n', 'gr', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'gD', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+    vim.keymap.set('n', '<space>wl', function()
+      print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    end, opts)
+    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+    vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
+    vim.keymap.set('n', '<space>f', function()
+      vim.lsp.buf.format { async = true }
+    end, opts)
+  end,
+})
+
+
 local db = require("dashboard")
 
 db.custom_center = {
@@ -87,105 +125,73 @@ db.custom_center = {
   action =  'Telescope file_browser',
   shortcut = 'SPC f b'},  
 }
-require("sessions").setup{
-    session_filepath = "/home/john/.config/nvim/session",
-}
 --require("toggleterm").setup()
 require("telescope").setup()
+require('telescope').load_extension('projects')
 require("octo").setup()
 require("todo-comments").setup()
-local cmp = require("cmp")
-cmp.setup({
- mapping = {
-   ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-   ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-   ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-   ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-   ['<C-e>'] = cmp.mapping({
-     i = cmp.mapping.abort(),
-     c = cmp.mapping.close(),
-   }),
-   ['<Tab>'] = cmp.mapping.confirm({ select = true }),
- },
- sources = {
- 	{ name = 'cmp_tabnine' },
- },
-})
-local tabnine = require('cmp_tabnine.config')
-tabnine:setup({
-	max_lines = 1000;
-	max_num_results = 20;
-	sort = true;
-	run_on_every_keystroke = true;
-	snippet_placeholder = '..';
-	ignored_file_types = { -- default is not to ignore
-		-- uncomment to ignore in lua:
-		-- lua = true
-	};
-	show_prediction_strength = false;
-})
-require("bufferline").setup{
-  options = {
-    offsets = {
-      {
-        filetype = "nerdtree",
-        text = function()
-          return vim.fn.getcwd()
-        end,
-        highlight = "Directory",
-        text_align = "left"
-      },
-    },
-    show_buffer_icons = true,
-    separator_style = "slant",
-  },
-  highlights = {
-    fill = {
-      ctermbg = 0,
-      ctermfg = 255,
-    },
-    background = {
-      ctermbg = 254,
-      ctermfg = 255,
-    },
-    separator = {
-      ctermbg = 254,
-      ctermfg = 0,
-    },
-    separator_selected = {
-      ctermbg = 252,
-      ctermfg = 0,
-    },
-    separator_visible = {
-      ctermbg = 254,
-      ctermfg = 0,
-    },
-    buffer_selected = {
-      ctermbg = 252,
-      ctermfg = 253,
-    },
-    buffer_visible = {
-      ctermbg = 254,
-      ctermfg = 255,
-    },
-    close_button = {
-      ctermbg = 254,
-      ctermfg = 255,
-    },
-    indicator_selected = {
-      ctermbg = 252,
-      ctermfg = 252,
-    },
-    close_button_selected = {
-      ctermbg = 252,
-      ctermfg = 253,
-    },
-    close_button_visible = {
-      ctermbg = 254,
-      ctermfg = 255,
-    },
-  },
-}
+-- require("bufferline").setup{
+--   options = {
+--     offsets = {
+--       {
+--         filetype = "nerdtree",
+--         text = function()
+--           return vim.fn.getcwd()
+--         end,
+--         highlight = "Directory",
+--         text_align = "left"
+--       },
+--     },
+--     show_buffer_icons = true,
+--     separator_style = "slant",
+--   },
+--   highlights = {
+--     fill = {
+--       ctermbg = 0,
+--       ctermfg = 255,
+--     },
+--     background = {
+--       ctermbg = 254,
+--       ctermfg = 255,
+--     },
+--     separator = {
+--       ctermbg = 254,
+--       ctermfg = 0,
+--     },
+--     separator_selected = {
+--       ctermbg = 252,
+--       ctermfg = 0,
+--     },
+--     separator_visible = {
+--       ctermbg = 254,
+--       ctermfg = 0,
+--     },
+--     buffer_selected = {
+--       ctermbg = 252,
+--       ctermfg = 253,
+--     },
+--     buffer_visible = {
+--       ctermbg = 254,
+--       ctermfg = 255,
+--     },
+--     close_button = {
+--       ctermbg = 254,
+--       ctermfg = 255,
+--     },
+--     indicator_selected = {
+--       ctermbg = 252,
+--       ctermfg = 252,
+--     },
+--     close_button_selected = {
+--       ctermbg = 252,
+--       ctermfg = 253,
+--     },
+--     close_button_visible = {
+--       ctermbg = 254,
+--       ctermfg = 255,
+--     },
+--   },
+-- }
 require("presence"):setup({
     -- General options
     auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
@@ -247,7 +253,7 @@ set nofoldenable
 set number relativenumber
 set numberwidth=2
 " theme
-set t_Co=256
+" set t_Co=256
 colorscheme mondo
 " hi PreProc ctermfg=white
 
@@ -391,16 +397,14 @@ nnoremap <leader>c :ToggleTerm<CR>
 map <f9> :make<cr>
 map <f8> :make clean<cr>
 " Start NERDTree when Vim is started without file arguments.
-autocmd StdinReadPre * let s:std_in=1
 
 if filereadable(expand('project.vim'))
   exe 'source project.vim'
 endif
 
-set guifont=Cascadia\ Code\ PL:h10
+set guifont=Cascadia\ Code\ PL:h14
 
 let NERDTreeMapOpenInTab='\r'
-let g:neovide_transparency=0.8
 command! W  write
 
 function! SynStack ()
@@ -422,7 +426,13 @@ let g:vimTrelloToken = '857c73247f86821fb99981d2fa88976552ae7ab140ab57b3a8596136
 set scrolljump=0
 autocmd BufRead,BufNewFile *.slm set filetype=slim
 if exists("g:neovide")
-  colorscheme dracula
+  colorscheme nord
 endif
 
 let g:snipMate = get(g:, 'snipMate', {}) " Allow for vimrc re-sourcing
+let g:zig_fmt_autosave = 1
+let g:neovide_padding_top = 30
+let g:neovide_padding_left = 30
+let g:neovide_padding_right = 30
+let g:neovide_padding_bottom = 30
+let g:neovide_cursor_vfx_mode = "railgun"
