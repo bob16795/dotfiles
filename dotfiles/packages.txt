@@ -37,7 +37,7 @@ P mondo-generator
 P mpc
 P mpv
 P mupdf
-P mutt-wizard
+P neovide
 P neovim
 P neovim-symlinks
 P network-manager-applet
@@ -53,7 +53,8 @@ P pulseaudio
 P python-neovim-git
 P python-pip
 P python-wheel
-P qutebrowser
+P firefox
+P gimp
 P ranger
 P scrot
 P spotify-tui
@@ -61,7 +62,7 @@ P spotifyd
 P sudo
 P sxhkd
 P sxiv
-P thefuck
+P itch
 P trello-cli
 P unityhub
 P wget
@@ -134,8 +135,10 @@ P ttf-twemoji-color
 P exa
 P python-pulsectl
 P themix-icons-numix-git
-P linklord
 P emacs
+P hyprland
+P xdg-desktop-portal-hyprland-git
+P kitty
 G bob16795/budwm
 G bob16795/st
 G bob16795/dmenu

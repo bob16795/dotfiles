@@ -16,9 +16,6 @@ dotfiles:
     src: xinitrc
     dst: ~/.xinitrc
     chmod: '755'
-  f_init.vim:
-    src: config/nvim/init.vim
-    dst: ~/.config/nvim/init.vim
   d_bash:
     src: config/bash
     dst: ~/.config/bash
@@ -111,13 +108,31 @@ dotfiles:
     src: config/fish
     dst: ~/.config/fish
     chmod: '700'
+  f_hyprland.conf:
+    src: config/hypr/hyprland.conf
+    dst: ~/.config/hypr/hyprland.conf
+  f_hyprpaper.conf:
+    src: config/hypr/hyprpaper.conf
+    dst: ~/.config/hypr/hyprpaper.conf
+  f_init.lua:
+    src: config/nvim/init.lua
+    dst: ~/.config/nvim/init.lua
+  d_user:
+    src: config/nvim/lua/user
+    dst: ~/.config/nvim/lua/user
+  d_waybar:
+    src: config/waybar
+    dst: ~/.config/waybar
+    chmod: '777'
+  d_kitty:
+    src: config/kitty
+    dst: ~/.config/kitty
 profiles:
-  default:
+  john-pc:
     actions:
     - setup
     dotfiles:
     - f_xinitrc
-    - f_init.vim
     - d_bash
     - f_sxhkdrc
     - d_mondo_gen
@@ -145,3 +160,9 @@ profiles:
     - f_keybindings.json
     - d_doom.d
     - d_fish
+    - f_hyprland.conf
+    - f_hyprpaper.conf
+    - f_init.lua
+    - d_user
+    - d_waybar
+    - d_kitty

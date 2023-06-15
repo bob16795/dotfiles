@@ -1,0 +1,88 @@
+* {
+    font-size: 14px;
+    font-family: CascadiaMonoPL Nerd Font Mono;
+    min-height: 30px;
+    color: #ffffff;
+}
+
+window#waybar {
+    color: white;
+    background: transparent;
+}
+
+#window {
+    background: #44475a;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #ffffff;
+}
+
+tooltip label {
+    color: white;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    background: transparent;
+    color: white;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    background: #313E7C;
+    border-bottom: 3px solid white;
+}
+
+#disk,
+#clock,
+#battery,
+#user,
+#cava,
+#custom-spotify {
+    padding: 0 10px;
+    background-color: #313E7C;
+}
+
+#clock,
+#cava {
+    border-radius: 10px 0px 0px 10px;
+}
+
+#disk.2,
+#tray {
+    background-color: #313E7C;
+    padding-right: 10px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#clock {
+    background-color: #313E7C;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    background-color: #313E7C;
+}
+
+#battery.charging {
+    color: #313E7C;
+    background-color: #10b981;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #2E3440;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #db4b4b;
+    color: #313E7C;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
