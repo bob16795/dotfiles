@@ -20,3 +20,5 @@ set -gx JAVA_HOME /usr/lib/jvm/java-8-openjdk/jre/
 set -gx BWP_GEOMETRY "2560x1080"
 
 thefuck --alias | source
+
+alias spotifyd='spotifyd -u 21ndnpvlkdukezg7ht2mkcyay -P "pass spotify" -d "Jorjes Computer" --on-song-change-hook "album-art"' 

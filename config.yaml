@@ -127,6 +127,9 @@ dotfiles:
   d_kitty:
     src: config/kitty
     dst: ~/.config/kitty
+  f_budland.conf:
+    src: config/budland/budland.conf
+    dst: ~/.config/budland/budland.conf
 profiles:
   john-pc:
     actions:
@@ -166,3 +169,4 @@ profiles:
     - d_user
     - d_waybar
     - d_kitty
+    - f_budland.conf

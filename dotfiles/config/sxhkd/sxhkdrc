@@ -75,6 +75,8 @@ super + {Up, Down, Left, Right}
   fakesig {18,19,20,21} # move split
 super + shift + Escape
   fakesig 99 # quit
+super + Escape
+  fakesig 99 # quit
 super + shift + b
   fakesig 24 # quit
 super + {F1,F2,F3,F4}

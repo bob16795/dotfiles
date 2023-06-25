@@ -25,6 +25,7 @@ act2                #f9f5d7
 #define             fg #bdae93
 act3                #4C566A
 ora                 #81A1C1
+wall                #2E3440
 terminalfontface1   CaskaydiaCovePL Nerd Font
 terminalfontface2   Twitter Color Emoji
 base00              #2E3440

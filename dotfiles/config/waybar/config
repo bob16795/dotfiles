@@ -1,15 +1,28 @@
 {
-    "layer": "top",
-    "margin": "20 20 0 20",
     "modules-left": [
+        "dwl/title#lt",
         "clock",
-        "gamemode",
         "battery#1",
         "battery#2",
         "pulseaudio",
         "disk#1",
         "disk#2",
+        "gamemode",
     ],
+    "modules-center": [
+        "dwl/title#title",
+    ],
+    "modules-right": [
+        "cava",
+        "image",
+        "tray",
+    ],
+    "dwl/title#title": {
+        "format": "{title}",
+    },
+    "dwl/title#lt": {
+        "format": " {layout} F{tag} ",
+    },
     "gamemode": {
         "format": "{glyph} {count}",
         "format-alt": "{glyph} {count}",
@@ -22,38 +35,30 @@
         "tooltip": true,
         "tooltip-format": "Games running: {count}"
     },
-    "modules-right": [
-        "cava",
-        "image",
-        "tray"
-    ],
-    "modules-center": [
-        "hyprland/window"
-    ],
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true
     },
     "battery#1": {
         "bat": "BAT0",
-        "format": "{icon} {capacity}",
+        "format": "{icon} {capacity}%",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
         ]
     },
     "battery#2": {
         "bat": "BAT1",
-        "format": "{icon} {capacity}",
+        "format": "{icon} {capacity}%",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
         ]
     },
     "clock": {
@@ -61,18 +66,18 @@
     },
     "disk#2": {
         "interval": 30,
-        "format": "⌂ {percentage_free}%",
+        "format": "\uf015 {percentage_used}%",
         "path": "/home"
     },
     "disk#1": {
         "interval": 30,
-        "format": "/ {percentage_free}%",
+        "format": "\udb80\udeca {percentage_used}%",
         "path": "/"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon}{volume}",
-        "format-muted": "",
+        "format-bluetooth": " {volume}",
+        "format-muted": " ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -92,7 +97,7 @@
         ]
     },
     "cava": {
-        //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
         "framerate": 30,
         "autosens": 1,
         "sensitivity": 100,
@@ -104,10 +109,10 @@
         "stereo": false,
         "reverse": false,
         "bar_delimiter": 0,
-        "monstercat": false,
-        "waves": true,
+        "monstercat": true,
+        "waves": false,
         "noise_reduction": 0.77,
-        "input_delay": 2,
+        "input_delay": 0,
         "format-icons": [
             "▁",
             "▂",
@@ -118,14 +123,11 @@
             "▇",
             "█"
         ],
-        "actions": {
-            "on-click-right": "mode"
-        }
     },
     "image": {
-        "exec": "/home/john/.config/waybar/custom/album_art.sh",
-        "interval": 5,
-        "size": 30
+        "path": "/tmp/cover.jpeg",
+        "signal": 15,
+        "size": 20,
     },
     "custom/spotify": {
         "exec": "/usr/bin/python3 /home/john/.config/waybar/custom/mediaplayer.py --player spotify",

@@ -42,7 +42,6 @@ require("packer").startup(function(use)
 
 
   use 'pwntester/octo.nvim'
-  use 'yggdroot/indentline'
   use 'andweeb/presence.nvim'
   use 'junegunn/goyo.vim'
   use {'yoshio15/vim-trello', branch = 'main'}
@@ -273,9 +272,8 @@ local options = { noremap = true }
 map('n', '<leader>gg', '<cmd>Git<cr>', options)
 map('n', '<leader>gb', '<cmd>Git blame<cr>', options)
 
-map('n', '<leader>tp', '<cmd>Telescope projects<cr>', options)
-map('n', '<leader>tf', '<cmd>Telescope fd<cr>', options)
-map('n', '<leader>td', '<cmd>TodoTelescope<cr>', options)
+map('n', '<leader>tp', ':Telescope projects<cr>', options)
+map('n', '<leader>tf', ':Telescope fd<cr>', options)
+map('n', '<leader>td', ':TodoTelescope<cr>', options)
 
 map('n', '<leader>rr', '<cmd>lua ReloadConfig()<cr>', options)
-

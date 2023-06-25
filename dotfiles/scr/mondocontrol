@@ -54,7 +54,6 @@ select_wallpaper() {
   wdir="$BWP_DIR/walls"
 
   newwall="$(
-
     mondo -l themes \
     | if command -v i3menu > /dev/null ; then
         i3menu                   \
@@ -67,7 +66,7 @@ select_wallpaper() {
           --height      350      \
 
       else
-        dmenu 
+        menu 
       fi
 
   )"

@@ -56,12 +56,13 @@ select_wallpaper() {
   newwall="$(
 
     find "$wdir" ! -path "$wdir" -printf '%f\n' \
-    | dmenu
+    | menu
   )"
 
   [[ -n $newwall ]] && {
     bwp "$newwall"
     updatemodule
+    waylandpaper
   }
 }
 

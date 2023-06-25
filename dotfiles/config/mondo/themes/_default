@@ -41,20 +41,4 @@ mondo.colors.ina3:        base2
 mondo.colors.sel1:     base00
 mondo.colors.sel2:     base3
 
-!! GUI theme
-#define cursortheme     Adwaita  
-#define icontheme       ePapirus
-#define gtktheme        buddybud 
-
-!! Terminal fonts
-#define terminalfontface1 monospace
-#define terminalfontsize1 12
-#define terminalfontface2 monospace
-#define terminalfontsize2 18
-
-!! GUI fonts
-#define guifontface1      monospace
-#define guifontsize1      12
-#define guifontface2      sans
-#define guifontsize2      18
-
+wall bg

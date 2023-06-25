@@ -1,5 +1,5 @@
 #!/bin/bash
-exec bemenu --fn "CaskaydiaCovePL Nerd Font" -H 20 \
+bemenu-run --fn "CaskaydiaCovePL Nerd Font" -H 20 \
     --hp 10 -c --list 15 -W 0.5 \
     --ab '#434C5E' \
     --af '#D8DEE9' \

@@ -24,4 +24,6 @@ dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XA
 
 mw sync &
 
+//exec ~/doc/rep/github.com/con-wm/zig-out/bin/conman 2> ~/.conmaninfo
+
 exec budwm 2>&1 > .budwminfo

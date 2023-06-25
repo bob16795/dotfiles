@@ -10,7 +10,7 @@ from pathlib import PurePath
 
 HOME = PurePath(os.getenv("HOME"))
 #        path                  tree   startup
-dirs = [[HOME / "dwn/web",     False, True],
+dirs = [[HOME / "dwn",         False, True],
         [HOME / "doc/src",     True,  False],
         [HOME / "doc/srt",     True,  True],
         [HOME,                 False,  False],
@@ -36,7 +36,7 @@ dir_actions = [
       "*.png": "mv %%file%% " + str(HOME / "pix/ss")
     },
     {
-      "sxhkdrc": "killall -USR1 sxhkd"
+      "$sxhkdrc^": "killall -USR1 sxhkd"
     }]
 
 

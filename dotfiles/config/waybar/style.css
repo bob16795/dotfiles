@@ -1,73 +1,69 @@
 * {
     font-size: 14px;
-    font-family: CascadiaMonoPL Nerd Font Mono;
-    min-height: 30px;
-    color: #ffffff;
+    font-family: CaskaydiaCovePL NerdFont;
+    min-height: 20px;
+    color: #f9f5d7;
 }
 
 window#waybar {
-    color: white;
-    background: transparent;
+    background: #3B4252;
+    color: #f9f5d7;
 }
 
 #window {
-    background: #44475a;
-    border-radius: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    color: #ffffff;
-}
-
-tooltip label {
-    color: white;
+    background: #3B4252;
+    color: #f9f5d7;
 }
 
 #workspaces button {
     padding: 0 10px;
     background: transparent;
     color: white;
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 #workspaces button.focused {
-    background: #313E7C;
-    border-bottom: 3px solid white;
+    background: #434C5E;
+    border-bottom: 2px solid white;
+}
+
+#cava {
+  padding: 0 5px;
+  background: #2E3440;
+  color: #3B4252;
+}
+
+#title.lt {
+  background-color: #434C5E;
+  color: #D8DEE9;
 }
 
 #disk,
 #clock,
 #battery,
 #user,
-#cava,
+#pulseaudio,
 #custom-spotify {
-    padding: 0 10px;
-    background-color: #313E7C;
+    padding: 0 5px;
+    background-color: #3B4252;
+    color: #f9f5d7;
 }
 
-#clock,
-#cava {
-    border-radius: 10px 0px 0px 10px;
-}
-
-#disk.2,
 #tray {
-    background-color: #313E7C;
-    padding-right: 10px;
-    border-radius: 0px 10px 10px 0px;
+    background-color: #434C5E;
+    color: #D8DEE9;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 #clock {
-    background-color: #313E7C;
-}
-
-#pulseaudio {
-    padding: 0 10px;
-    background-color: #313E7C;
+    background-color: #434C5E;
+    color: #D8DEE9;
 }
 
 #battery.charging {
-    color: #313E7C;
-    background-color: #10b981;
+    background-color: #A3BE8C;
+    color: #434C5E;
 }
 
 @keyframes blink {
@@ -78,8 +74,8 @@ tooltip label {
 }
 
 #battery.warning:not(.charging) {
-    background: #db4b4b;
-    color: #313E7C;
+    background: #BF616A;
+    color: #434C5E;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
