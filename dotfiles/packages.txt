@@ -139,6 +139,8 @@ P emacs
 P hyprland
 P xdg-desktop-portal-hyprland-git
 P kitty
+P swww
+P wf-recorder
 G bob16795/budwm
 G bob16795/st
 G bob16795/dmenu
