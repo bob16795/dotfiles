@@ -11,9 +11,9 @@ track=$(echo "$tmp" | grep "title " | sed "s/.*:title //" | sed "s/^ *//")
 
 cache="$artist - $album"
 
-[ "$cache" != "$(cat /tmp/cover.txt)" ] || exit
+[ "$cache" == "$(cat /tmp/cover.txt)" ] && exit
 
-sacad "$artist" "$album" 50 "/tmp/cover.jpeg" -v quiet
-echo $cache > /tmp/cover.txt
+sacad "$artist" "$album" 160 "/tmp/cover.jpeg" -v quiet
+printf "%s" "$cache" > /tmp/cover.txt
 kill -RTMIN+15 $(pidof waybar)
-notify-send -i "/tmp/cover.jpeg" "$track" "$artist" 
+notify-send -u low -i "/tmp/cover.jpeg" "$track" "$artist" 

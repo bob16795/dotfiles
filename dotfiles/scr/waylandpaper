@@ -5,4 +5,4 @@
 
 color=$(mondo -c wall)
 convert -size 100x100 "xc:$color" ~/pix/wall.png
-swww img ~/pix/wall.png --transition-type wipe -f Nearest --transition-fps 60
+swww img ~/pix/wall.png --transition-type outer -f Nearest --transition-fps 60

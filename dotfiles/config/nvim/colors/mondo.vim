@@ -6,7 +6,7 @@
 " cool help screens
 " :he group-name
 " :he highlight-groups
-" :he cterm-colors
+" :he gui-colors
 
 " your pick:
 set background=dark	" or light
@@ -15,8 +15,9 @@ if exists("syntax_on")
     syntax reset
 endif
 let g:colors_name="mondo"
+set termguicolors
 
-"hi Normal
+hi Normal guifg=#D8DEE9 guibg=#2E3440
 
 " OR
 
@@ -45,28 +46,30 @@ let g:colors_name="mondo"
 
 "hi Cursor		
 "hi CursorIM	
-hi Directory ctermfg=252
+hi Directory guifg=#D8DEE9
 "hi DiffAdd		
 "hi DiffChange	
 "hi DiffDelete	
 "hi DiffText	
 "hi ErrorMsg	
-"hi VertSplit	
+hi VertSplit guibg=#434C5E guifg=#4C566A
+hi EndOfBuffer guibg=#434C5E guifg=#434C5E
 "hi Folded		
 "hi FoldColumn	
 "hi IncSearch	
-hi LineNr ctermbg=0 ctermfg=15 cterm=bold
-hi CursorLineNr ctermbg=0 ctermfg=11 cterm=bold
+hi LineNr guibg=#2E3440 guifg=#D8DEE9 gui=bold
+hi CursorLineNr guibg=#2E3440 guifg=#EBCB8B gui=bold
 "hi ModeMsg		
-hi MoreMsg ctermbg=0 ctermfg=15	cterm=reverse
-hi NonText ctermfg=5		
-hi Question ctermbg=0 ctermfg=15
-"hi Search		
-hi SpecialKey	ctermfg=5
-hi StatusLine ctermbg=252 ctermfg=253	cterm=bold
-hi SignColumn ctermbg=252 ctermfg=253 cterm=none
-hi StatusLineNC	ctermbg=252 ctermfg=253 cterm=bold
-hi User1 ctermbg=252 ctermfg=253
+hi MoreMsg guibg=#2E3440 guifg=#D8DEE9 gui=reverse
+hi NonText guifg=#B48EAD		
+hi Question guibg=#2E3440 guifg=#D8DEE9
+hi Search guibg=#3B4252 guifg=#f9f5d7
+hi SpecialKey	guifg=#B48EAD
+hi StatusLine guibg=#3B4252 guifg=#f9f5d7	gui=bold
+hi SignColumn guibg=#434C5E guifg=#D8DEE9 gui=none
+hi LineNr guibg=#434C5E guifg=#D8DEE9 gui=none
+hi StatusLineNC	guibg=#3B4252 guifg=#f9f5d7 gui=bold
+hi User1 guibg=#3B4252 guifg=#f9f5d7
 "hi Title		
 "hi Visual		
 "hi VisualNOS	
@@ -77,21 +80,43 @@ hi User1 ctermbg=252 ctermfg=253
 "hi Tooltip		
 
 " syntax highlighting groups
-hi Comment cterm=italic ctermfg=252
-hi Constant ctermfg=11
-hi Identifier ctermfg=11	
-"hi Statement	
-hi PreProc ctermfg=8
-hi Type	ctermfg=6	
-hi Special ctermfg=5
-hi Underlined	ctermfg=4 cterm=underline
+hi Comment gui=italic guifg=#A3BE8C
+hi Constant guifg=#EBCB8B
+hi Identifier guifg=#D08770 gui=bold
+hi Statement guifg=#D8DEE9
+hi PreProc guifg=#5E81AC
+hi Type	guifg=#88C0D0
+hi Special guifg=#B48EAD
+hi Underlined	guifg=#5E81AC gui=underline
 "hi Ignore		
 "hi Error		
 "hi Todo		
 
-hi SyntasticErrorLine ctermbg=red
-hi SyntasticErrorSign ctermbg=8 ctermfg=red
-hi SyntasticWarningLine ctermbg=yellow
-hi SyntasticWarningSign ctermbg=8 ctermfg=yellow
-hi String ctermfg=green
+hi SyntasticErrorLine guibg=#BF616A
+hi SyntasticErrorSign guibg=#2E3440 guifg=#BF616A
+hi SyntasticWarningLine guibg=#EBCB8B
+hi SyntasticWarningSign guibg=#2E3440 guifg=#EBCB8B
+hi String guifg=#A3BE8C
 
+hi TabLine guibg=#434C5E guifg=#4C566A
+
+hi BufferCurrent guibg=#3B4252 guifg=#f9f5d7
+hi BufferCurrentMod guibg=#3B4252 guifg=#f9f5d7
+hi BufferCurrentSign guibg=#3B4252 guifg=#4C566A
+hi BufferCurrentSignRight guibg=#3B4252 guifg=#4C566A
+
+hi BufferVisible guibg=#434C5E guifg=#D8DEE9
+hi BufferVisibleMod guibg=#434C5E guifg=#D8DEE9
+hi BufferVisibleSign guibg=#434C5E guifg=#4C566A
+hi BufferVisibleSignRight guibg=#434C5E guifg=#4C566A
+
+hi BufferInactive guibg=#434C5E guifg=#D8DEE9
+hi BufferInactiveMod guibg=#434C5E guifg=#D8DEE9
+hi BufferInactiveSign guibg=#434C5E guifg=#4C566A
+hi BufferInactiveSignRight guibg=#434C5E guifg=#4C566A
+
+hi BufferTabpageFill guibg=#434C5E guifg=#D8DEE9
+hi BufferOffset guibg=#2E3440 guifg=#D8DEE9
+
+hi Pmenu guibg=#434C5E guifg=#D8DEE9
+hi PmenuSel guibg=#3B4252 guifg=#f9f5d7

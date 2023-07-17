@@ -21,4 +21,5 @@ set -gx BWP_GEOMETRY "2560x1080"
 
 thefuck --alias | source
 
-alias spotifyd='spotifyd -u 21ndnpvlkdukezg7ht2mkcyay -P "pass spotify" -d "Jorjes Computer" --on-song-change-hook "album-art"' 
+alias spotifyd='spotifyd -u 21ndnpvlkdukezg7ht2mkcyay -P "pass spotify" --device-type speaker -d "Jorjes House" --on-song-change-hook "album-art"' 
+alias vim='neovide --multigrid'

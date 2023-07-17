@@ -1,13 +1,19 @@
 {
+    "fixed-center": false,
     "modules-left": [
         "dwl/title#lt",
         "clock",
         "battery#1",
+        "custom/spacer",
         "battery#2",
+        "custom/spacer",
         "pulseaudio",
+        "custom/spacer",
         "disk#1",
+        "custom/spacer",
         "disk#2",
-        "gamemode",
+        "custom/spacer",
+        "user",
     ],
     "modules-center": [
         "dwl/title#title",
@@ -17,6 +23,9 @@
         "image",
         "tray",
     ],
+    "custom/spacer": {
+        "format": "|"
+    },
     "dwl/title#title": {
         "format": "{title}",
     },
@@ -27,7 +36,7 @@
         "format": "{glyph} {count}",
         "format-alt": "{glyph} {count}",
         "glyph": "",
-        "hide-not-running": true,
+        "hide-not-running": false,
         "use-icon": true,
         "icon-name": "input-gaming-symbolic",
         "icon-spacing": 4,
@@ -35,13 +44,10 @@
         "tooltip": true,
         "tooltip-format": "Games running: {count}"
     },
-    "hyprland/window": {
-        "format": "{}",
-        "separate-outputs": true
-    },
     "battery#1": {
         "bat": "BAT0",
         "format": "{icon} {capacity}%",
+        "format-full": "{icon} FUL",
         "format-icons": [
             " ",
             " ",
@@ -53,6 +59,7 @@
     "battery#2": {
         "bat": "BAT1",
         "format": "{icon} {capacity}%",
+        "format-full": "{icon} FUL",
         "format-icons": [
             " ",
             " ",
@@ -76,10 +83,12 @@
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-bluetooth": " {volume}",
-        "format-muted": " ",
+        "format-bluetooth": " {volume}%",
+        "format-muted": "{icon} MUT",
         "format-icons": {
-            "headphone": "",
+            "headphone": [
+                "󰋋"
+            ],
             "hands-free": "",
             "headset": "",
             "phone": "",
@@ -91,7 +100,7 @@
             ]
         },
         "scroll-step": 1,
-        "on-click": "pavucontrol",
+        "on-click": "pamixer -t",
         "ignored-sinks": [
             "Easy Effects Sink"
         ]
@@ -138,6 +147,6 @@
         "on-scroll-down": "playerctl previous"
     },
     "user": {
-        "format": "{user}, {work_d} days"
+        "format": "󰥔 {work_d}D"
     }
 }
