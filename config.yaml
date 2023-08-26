@@ -138,6 +138,9 @@ dotfiles:
     src: config/mondo/post-apply
     dst: ~/.config/mondo/post-apply
     chmod: '755'
+  f_alacritty.yml:
+    src: config/alacritty/alacritty.yml
+    dst: ~/.config/alacritty/alacritty.yml
 profiles:
   john-pc:
     actions:
@@ -180,3 +183,4 @@ profiles:
     - f_budland.conf
     - f_pre-apply
     - f_post-apply
+    - f_alacritty.yml
