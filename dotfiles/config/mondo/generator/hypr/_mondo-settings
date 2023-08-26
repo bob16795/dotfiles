@@ -6,14 +6,16 @@
 
 # If ext is set, it will be appended as an extension
 # when files are generated.
-ext=""
+#ext="rasi"
 
 # The default format is "hex". If format is set to
 # rgb, colors will be translated to RGB format.
 # Example: #FF00FF -> 255,255,255
-#format="hex"
+colorformat="%R%G%B%A"
 
 # target can be an (absolute) file path to where
 # the file will be copied when a theme is applied.
 
-target="$HOME/.themes/Redmond97/theme.conf"
+target="$HOME/.config/hypr/colors.conf"
+
+# syntax:ssHash

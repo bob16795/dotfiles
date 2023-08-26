@@ -2,6 +2,8 @@
 	"name": "vs-wal",
 	"type": "dark",
 	"colors": {
+    "editorInlayHint.parameterBackground": "#00000000",
+    "editorInlayHint.parameterForeground": "%%base0%%",
 		"editor.foreground": "%%fg%%",
 		"activityBarBadge.background": "%%ora%%",
 		"sideBarTitle.foreground": "%%fg%%",

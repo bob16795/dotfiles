@@ -39,6 +39,8 @@ ina3        base00
 sel1     base00
 sel2     base3
 
+wall base0
+
 cursortheme     Adwaita  
 icontheme       ePapirus
 gtktheme        buddybud 

@@ -1,7 +1,6 @@
 #!/bin/bash
-
 # This script is executed every time a theme is applied.
-# Each generator can have it's own mondo-apply script.
+# Each generator can have it's own _mondo-apply script.
 
 # The default syntax is bash, but by changing the shebang,
 # one could use another language (f.i. perl or python).
@@ -11,13 +10,12 @@
 # If this script is not needed, this file can safely be removed.
 # (removing the file, will improve execution speed)
 
-# this_dir="${1%/*}"
-this_file="${1##*/}"
-this_theme="${this_file%.*}"
+# MONDO_DIR="${1%%/generator*}"
+# THIS_DIR="${1%/*}"
+# THIS_GENERATOR="${THIS_DIR##*/}"
+# THIS_FILE="${1##*/}"
+# THIS_THEME="${THIS_FILE%.*}"
 
 # To source the settings file one could use this:
-# source "${this_dir}/mondo-settings"
+# source "${THIS_DIR}/_mondo-settings"
 
-gsettings set org.gnome.desktop.interface gtk-theme "${this_theme}R"
-
-gsettings set org.gnome.desktop.interface icon-theme "$this_theme"

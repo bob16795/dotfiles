@@ -48,8 +48,8 @@ bar_spacing = 1
 # 
 # For alsa 'source' will be the capture device.
 # For fifo 'source' will be the path to fifo-file.
-; method = pulse
-; source = auto
+method = pulse
+source = auto
 
 ; method = alsa
 ; source = hw:Loopback,1
@@ -97,7 +97,7 @@ method = ncurses
 # Or defined by hex code '#xxxxxx' (hex code must be within ''). User defined colors requires a
 # terminal that can change color definitions such as Gnome-terminal or rxvt.
 background = black
-foreground = "%%act1%%"
+foreground = "%%act3%%"
 
 # Gradient mode, only hex defined colors are supported, background must also be defined in hex
 # or remain commented out. 1 = on, 0 = off. Warning: for certain terminal emulators cava will
@@ -105,8 +105,6 @@ foreground = "%%act1%%"
 ; gradient = 1
 ; gradient_color_1 = '%%act1%%'
 ; gradient_color_2 = '%%ina1%%'
-
-
 
 [smoothing]
 

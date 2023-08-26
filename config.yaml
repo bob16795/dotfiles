@@ -23,10 +23,11 @@ dotfiles:
     src: config/sxhkd/sxhkdrc
     dst: ~/.config/sxhkd/sxhkdrc
   d_mondo_gen:
-    src: config/mondo
-    dst: ~/.config/mondo
+    src: config/mondo/generator
+    dst: ~/.config/mondo/generator
     upignore:
-    - '*'
+    - '*/*'
+    - '!_*'
   d_mondo_thm:
     src: config/mondo/themes
     dst: ~/.config/mondo/themes
@@ -130,6 +131,13 @@ dotfiles:
   f_budland.conf:
     src: config/budland/budland.conf
     dst: ~/.config/budland/budland.conf
+  f_pre-apply:
+    src: config/mondo/pre-apply
+    dst: ~/.config/mondo/pre-apply
+  f_post-apply:
+    src: config/mondo/post-apply
+    dst: ~/.config/mondo/post-apply
+    chmod: '755'
 profiles:
   john-pc:
     actions:
@@ -170,3 +178,5 @@ profiles:
     - d_waybar
     - d_kitty
     - f_budland.conf
+    - f_pre-apply
+    - f_post-apply

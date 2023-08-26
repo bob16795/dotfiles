@@ -1,38 +1,38 @@
-st.foreground:             #D8DEE9
-st.background:             #2E3440
-st.cursorColor:            #D8DEE9
-st.cursorColor2:           #2E3440
-st.borderColor:            #2E3440
+st.foreground:             #252323
+st.background:             #FFBB8B
+st.cursorColor:            #252323
+st.cursorColor2:           #FFBB8B
+st.borderColor:            #FFBB8B
 
-st.color0:                 #2E3440
-st.color8:                 #D8DEE9
-st.color1:                 #BF616A
-st.color9:                 #81A1C1
-st.color2:                 #A3BE8C
-st.color10:                #ECEFF4
-st.color3:                 #EBCB8B
-st.color11:                #f9f5d7
-st.color4:                 #5E81AC
-st.color12:                #B48EAD
-st.color5:                 #D08770
-st.color13:                #3B4252
-st.color6:                 #88C0D0
-st.color14:                #434C5E
-st.color7:                 #D8DEE9
-st.color15:                #4C566A
+st.color0:                 #FFBB8B
+st.color8:                 #b57614
+st.color1:                 #cc241d
+st.color9:                 #9d0006
+st.color2:                 #98971a
+st.color10:                #D29E43
+st.color3:                 #d79921
+st.color11:                #BD9B61
+st.color4:                 #458588
+st.color12:                #076678
+st.color5:                 #b16286
+st.color13:                #F77438
+st.color6:                 #689d6a
+st.color14:                #ffffff
+st.color7:                 #252323
+st.color15:                #32302F
 
-*.coloract1:              #3B4252
-*.coloract2:              #f9f5d7
-*.colorina1:              #434C5E
-*.colorina2:              #D8DEE9
+*.coloract1:              #FF8C57
+*.coloract2:              #ffffff
+*.colorina1:              #BD9B61
+*.colorina2:              #9F7A39
 
 
-budwm.normbordercolor:      #4C566A
-budwm.normbgcolor:          #434C5E
-budwm.normfgcolor:          #D8DEE9
-budwm.selbordercolor:       #4C566A
-budwm.selbgcolor:           #3B4252
-budwm.selfgcolor:           #f9f5d7
+budwm.normbordercolor:      #9F7A39
+budwm.normbgcolor:          #BD9B61
+budwm.normfgcolor:          #9F7A39
+budwm.selbordercolor:       #F77438
+budwm.selbgcolor:           #FF8C57
+budwm.selfgcolor:           #ffffff
 
 st.borderpx:          20
 st.alpha: 1
@@ -44,9 +44,9 @@ st.font:       CaskaydiaCovePL Nerd Font:size=12:antialias=true
 *italicFont:     
 *boldItalicFont: 
 
-dmenu.background: #3B4252
-dmenu.foreground: #f9f5d7
-dmenu.selbackground: #434C5E
-dmenu.selforeground: #D8DEE9
+dmenu.background: #FF8C57
+dmenu.foreground: #ffffff
+dmenu.selbackground: #BD9B61
+dmenu.selforeground: #9F7A39
 
 ! syntax:ssExcla

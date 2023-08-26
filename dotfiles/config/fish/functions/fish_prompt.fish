@@ -20,3 +20,7 @@ function fish_prompt
     echo -n $symbol
     set_color normal
 end
+
+function fish_command_not_found
+    cd $argv[1]
+end

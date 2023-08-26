@@ -1,4 +1,4 @@
-vim.opt.guifont = "Cascadia Code PL:h11"
+vim.opt.guifont = "CaskaydiaCove NFP:h12"
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -11,7 +11,6 @@ require("packer").startup(function(use)
     use 'jiangmiao/auto-pairs'
     use 'Shougo/neocomplcache.vim'
     use 'alaviss/nim.nvim'
-    use 'scrooloose/syntastic'
     use 'farmergreg/vim-lastplace'
     use 'ctrlpvim/ctrlp.vim'
     use 'vimwiki/vimwiki'
@@ -36,10 +35,8 @@ require("packer").startup(function(use)
     use 'arcticicestudio/nord-vim'
     use 'airblade/vim-gitgutter'
 
-    use 'lambdalisue/battery.vim'
     use 'vim-test/vim-test'
     use 'vim-scripts/OmniCppComplete'
-    --use 'akinsho/bufferline.nvim'
     use 'tpope/vim-fugitive'
     use 'nvim-tree/nvim-web-devicons'
 
@@ -56,10 +53,14 @@ require("packer").startup(function(use)
     use 'ahmedkhalf/project.nvim'
     use 'nvim-lua/lsp-status.nvim'
     use 'brenoprata10/nvim-highlight-colors'
-    use { 'neoclide/coc.nvim', branch = 'release' }
+    use "akinsho/toggleterm.nvim"
 end)
 
 require 'user.reload'
+
+require("toggleterm").setup {
+    direction = 'vertical'
+}
 
 require('nvim-tree').setup {
 
@@ -257,7 +258,33 @@ inoremap <S-ScrollWheelDown> <ScrollWheelRight>
 inoremap <S-2-ScrollWheelDown> <2-ScrollWheelRight>
 inoremap <S-3-ScrollWheelDown> <3-ScrollWheelRight>
 inoremap <S-4-ScrollWheelDown> <4-ScrollWheelRight>
+
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 ]])
+
+-- The function is called `t` for `termcodes`.
+-- You don't have to call it that, but I find the terseness convenient
+local function t(str)
+    -- Adjust boolean arguments as needed
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+_G.tab_complete = function()
+    if vim.fn.pumvisible() == 1 then
+        return t '<C-n>'
+    else
+        return t '<Tab>'
+    end
+end
+
+_G.s_tab_complete = function()
+    if vim.fn.pumvisible() == 1 then
+        return t '<C-p>'
+    else
+        return t '<C-h>'
+    end
+end
 
 -- line numbers
 vim.opt.number = true
@@ -267,7 +294,7 @@ vim.g.mapleader = " "
 
 -- neovide
 vim.g.neovide_cursor_vfx_mode = "railgun"
-vim.g.neovide_transparency = 1.0
+vim.g.neovide_floating_opacity = 0
 
 -- sign
 vim.opt.signcolumn = "yes"
@@ -321,3 +348,4 @@ map('n', '<leader>td', ':TodoTelescope<cr>', options)
 
 map('n', '<leader>rr', '<cmd>lua ReloadConfig()<cr>', options)
 map('n', '<leader>n', ':NvimTreeToggle<cr>', options)
+map('n', '<leader>t', ':ToggleTerm<cr>', options)

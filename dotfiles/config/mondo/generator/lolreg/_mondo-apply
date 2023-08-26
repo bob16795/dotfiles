@@ -20,5 +20,5 @@ THIS_THEME="${THIS_FILE%.*}"
 # source "${THIS_DIR}/_mondo-settings"
 cd $HOME
 
-wine reg import ".config/mondo/generator/lolreg/$THIS_THEME"
+wine reg import ".config/mondo/generator/lolreg/$THIS_THEME" &
 

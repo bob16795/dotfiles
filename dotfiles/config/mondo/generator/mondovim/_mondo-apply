@@ -18,4 +18,5 @@
 
 # To source the settings file one could use this:
 # source "${THIS_DIR}/_mondo-settings"
-/home/prestosilver/.config/herbstluftwm/autostart
+
+ls $XDG_RUNTIME_DIR/nvim.*.0 | xargs -I {} nvim --server {} --remote-send "<esc>:colorscheme mondo<cr>"

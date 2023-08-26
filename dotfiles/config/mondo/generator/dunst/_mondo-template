@@ -1,9 +1,9 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "%%bg%%"
-    foreground = "%%fg%%"
-    frame_color = "%%act3%%"
+    background = "%%ina1%%"
+    foreground = "%%ina2%%"
+    frame_color = "%%ina3%%"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
@@ -12,12 +12,12 @@
     background = "%%bg%%"
     foreground = "%%fg%%"
     frame_color = "%%act3%%"
-    timeout = 10
+    timeout = 20
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-    background = "%%red%%"
+    background = "%%act1%%"
     foreground = "%%act2%%"
     frame_color = "%%act3%%"
     timeout = 0
@@ -26,7 +26,6 @@
 
 [global]
     # Defines color of the frame around the notification window.
-    frame_color = "%%fg%%"
 
     # Define a color for the separator.
     # possible values are:

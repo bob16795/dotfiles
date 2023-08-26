@@ -19,3 +19,6 @@
 # source "${this_dir}/mondo-settings"
 
 dunstmerge
+
+killall dunst
+dunst -q &

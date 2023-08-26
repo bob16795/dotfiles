@@ -34,7 +34,7 @@ budwm.selbordercolor:       %%act3%%
 budwm.selbgcolor:           %%act1%%
 budwm.selfgcolor:           %%act2%%
 
-st.borderpx:          1
+st.borderpx:          20
 st.alpha: 1
 
 *.font:       %%guifontface1%%:size=%%guifontsize1%%:antialias=true

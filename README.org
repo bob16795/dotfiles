@@ -3,11 +3,10 @@
 
 * INSTALL
 ** Install Arch
+You gotta figure out this yourself
 ** Clone the repo
-** Use dotdrop with "default" profile
-
-* BUDWM
+git clone https://github.com/bob16795/dotfiles
+* WAYLAND
+* BUDLAND
 #+ATTR_HTML: :width 300px
 [[./assets/wm.png]]
-
-* SXHKD

@@ -14,7 +14,7 @@ dirs = [[HOME / "dwn",         False, True],
         [HOME / "doc/src",     True,  False],
         [HOME / "doc/srt",     True,  True],
         [HOME,                 False,  False],
-        [HOME / ".config",     True,  False]]
+        [HOME / "pix",         False,  True]]
 SORT = {
         "*.pdf": "mv %%file%% " + str(HOME / "doc/pdf/msc"),
         "*.java": "mv %%file%% " + str(HOME / "doc/java/misc/ref"),
@@ -36,7 +36,7 @@ dir_actions = [
       "*.png": "mv %%file%% " + str(HOME / "pix/ss")
     },
     {
-      "$sxhkdrc^": "killall -USR1 sxhkd"
+      "*.png": "mv %%file%% " + str(HOME / "pix/ss")
     }]
 
 

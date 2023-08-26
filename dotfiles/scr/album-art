@@ -1,6 +1,4 @@
 #!/bin/bash
-[[ $(ip -o link | grep 'state UP' | grep -v LOOPBACK | grep -v '^lo' | grep -v '^brd' | grep -v '^scope-id' | grep -v '^type' | grep -v '^inet' | grep -v '^inet6' | grep -v '^brd' | grep -v '^scope-id' | grep -v '^type' | grep -v '^inet' | grep -v '^inet6') == "" ]] && exit
-
 tmp="$(playerctl metadata | grep xesam)"
 
 [ -x "$tmp" ] && exit

@@ -19,6 +19,7 @@
         "dwl/title#title",
     ],
     "modules-right": [
+        "gamemode",
         "cava",
         "image",
         "tray",
@@ -36,8 +37,8 @@
         "format": "{glyph} {count}",
         "format-alt": "{glyph} {count}",
         "glyph": "",
-        "hide-not-running": false,
-        "use-icon": true,
+        "hide-not-running": true,
+        "use-icon": false,
         "icon-name": "input-gaming-symbolic",
         "icon-spacing": 4,
         "icon-size": 20,
@@ -49,11 +50,11 @@
         "format": "{icon} {capacity}%",
         "format-full": "{icon} FUL",
         "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "",
+            "",
+            "",
+            "",
+            ""
         ]
     },
     "battery#2": {
@@ -61,11 +62,11 @@
         "format": "{icon} {capacity}%",
         "format-full": "{icon} FUL",
         "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "",
+            "",
+            "",
+            "",
+            ""
         ]
     },
     "clock": {

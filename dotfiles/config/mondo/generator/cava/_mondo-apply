@@ -18,3 +18,4 @@
 # To source the settings file one could use this:
 # source "${this_dir}/mondo-settings"
 
+killall -USR1 cava

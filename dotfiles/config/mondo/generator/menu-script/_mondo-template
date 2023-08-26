@@ -1,0 +1,17 @@
+#!/bin/bash
+exec bemenu --fn "%%guifontface1%%" -H 20 \
+    --hp 10 -c --list 15 -W 0.5 \
+    --ab '%%ina1%%' \
+    --af '%%ina2%%' \
+    --nb '%%ina1%%' \
+    --nf '%%ina2%%' \
+    --hb '%%act1%%' \
+    --hf '%%act2%%' \
+    --fb '%%ina1%%' \
+    --ff '%%ina2%%' \
+    --fbb '%%act1%%' \
+    --fbf '%%act2%%' \
+    --tb '%%act1%%' \
+    --tf '%%act2%%' \
+    --bdr '%%act3%%' \
+    -B 2 --fixed-height --scrollbar --counter
