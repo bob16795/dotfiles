@@ -149,5 +149,8 @@
     },
     "user": {
         "format": "󰥔 {work_d}D"
-    }
+    },
+    "tray": {
+        "spacing": 3
+    },
 }

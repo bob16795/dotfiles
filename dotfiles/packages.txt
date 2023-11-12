@@ -21,6 +21,7 @@ P gamemode
 P git-lfs
 P git
 P htop
+P imv
 P itch-bin
 P j4-dmenu-desktop
 P linklord
@@ -33,6 +34,7 @@ P neoviim-symlinks
 P network-manager-applet
 P obsidian
 P p7zip
+P pass
 P pamixer
 P pavucontrol
 P pipewire-alsa
@@ -44,7 +46,6 @@ P spotifyd
 P spotify-tui
 P steam
 P swww
-P sxiv
 P syncthing
 P thefuck
 P ttf-cascadia-code

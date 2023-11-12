@@ -6,7 +6,7 @@ end
 
 set -gx BROWSER qutebrowser
 set -gx XDG_DATA_HOME "$HOME/.local/share"
-set -gx BWP_COMMAND "feh --no-fehbg --bg-fill"
+set -gx BWP_COMMAND "waylandpaper"
 set -gx BWP_DIR "$HOME/pix/wallpapers"
 set -gx GEM_HOME "$XDG_DATA_HOME"/gem
 set -gx GEM_SPEC_CACHE "$XDG_CACHE_HOME"/gem

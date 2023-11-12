@@ -89,8 +89,6 @@
     "editor.fontFamily": "'Cascadia Code PL'",
     "editor.suggest.showReferences": false,
     "task.autoDetect": "off",
-    "nim.enableNimsuggest": false,
-    "nim.provider": "lsp",
     "security.workspace.trust.untrustedFiles": "open",
     "editor.formatOnSave": true,
     "editor.fontLigatures": true,
@@ -108,4 +106,8 @@
         "comments": {"fontStyle": "italic"}
     },
     "zig.zls.enableInlayHints": false,
+    "window.zoomLevel": -1,
+    "editor.tabSize": 2,
+    "nim.nimprettyIndent": 2,
+    "nim.useNimsuggestCheck": true,
 }

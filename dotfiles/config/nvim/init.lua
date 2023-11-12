@@ -5,6 +5,7 @@ vim.g.loaded_netrwPlugin = 1
 
 require("packer").startup(function(use)
     -- Packer can manage itself
+    use 'NoahTheDuke/vim-just'
     use 'wbthomason/packer.nvim'
     use 'glepnir/dashboard-nvim'
     use 'nvim-tree/nvim-tree.lua'
@@ -289,6 +290,8 @@ end
 -- line numbers
 vim.opt.number = true
 
+vim.opt.completeopt = "menuone,noinsert,noselect"
+
 -- leader key
 vim.g.mapleader = " "
 
@@ -332,6 +335,14 @@ vim.opt.syntax = "on"
 
 -- styiling
 vim.opt.fillchars = "vert:▎"
+
+-- bamba
+vim.api.nvim_create_autocmd('BufRead,BufNewFile', {
+    pattern = { '*.bam' },
+    callback = function()
+        vim.opt.syntax = 'bamba'
+    end,
+})
 
 -- Binds
 

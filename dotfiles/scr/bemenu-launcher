@@ -1,17 +1,17 @@
 #!/bin/bash
 bemenu-run --fn "CaskaydiaCovePL Nerd Font" -H 20 \
     --hp 10 -c --list 15 -W 0.5 \
-    --ab '#BD9B61' \
-    --af '#9F7A39' \
-    --nb '#BD9B61' \
-    --nf '#9F7A39' \
-    --hb '#FF8C57' \
-    --hf '#ffffff' \
-    --fb '#BD9B61' \
-    --ff '#9F7A39' \
-    --fbb '#FF8C57' \
-    --fbf '#ffffff' \
-    --tb '#FF8C57' \
-    --tf '#ffffff' \
-    --bdr '#F77438' \
+    --ab '#434C5E' \
+    --af '#D8DEE9' \
+    --nb '#434C5E' \
+    --nf '#D8DEE9' \
+    --hb '#3B4252' \
+    --hf '#f9f5d7' \
+    --fb '#434C5E' \
+    --ff '#D8DEE9' \
+    --fbb '#3B4252' \
+    --fbf '#f9f5d7' \
+    --tb '#3B4252' \
+    --tf '#f9f5d7' \
+    --bdr '#4C566A' \
     -B 2 --fixed-height --scrollbar --counter

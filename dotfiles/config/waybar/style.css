@@ -3,50 +3,38 @@
     font-family: CaskaydiaCove NFP;
     font-weight: bold;
     min-height: 20px;
-    color: #ffffff;
+    color: #f9f5d7;
 }
 
 window#waybar {
-    background: #FF8C57;
-    color: #ffffff;
+    background: #3B4252;
+    color: #f9f5d7;
 }
 
 #window {
-    background: #FF8C57;
-    color: #ffffff;
+    background: #3B4252;
+    color: #f9f5d7;
 }
 
 #custom-spacer {
     padding: 0 5px;
-    color: #F77438;
-}
-
-#workspaces button {
-    padding: 0 10px;
-    background: transparent;
-    color: white;
-    border-bottom: 2px solid transparent;
-}
-
-#workspaces button.focused {
-    background: #BD9B61;
-    border-bottom: 2px solid white;
+    color: #4C566A;
 }
 
 #cava {
   padding: 0 5px;
-  background: #FFBB8B;
-  color: #FF8C57;
+  background: #2E3440;
+  color: #3B4252;
 }
 
 #title.lt {
-  background-color: #BD9B61;
-  color: #9F7A39;
+  background-color: #434C5E;
+  color: #D8DEE9;
 }
 
 #pulseaudio.muted {
-  background-color: #BD9B61;
-  color: #9F7A39;
+  background-color: #434C5E;
+  color: #D8DEE9;
 }
 
 #battery.1 {
@@ -63,37 +51,37 @@ window#waybar {
 #user,
 #pulseaudio,
 #custom-spotify {
-    background-color: #FF8C57;
-    color: #ffffff;
+    background-color: #3B4252;
+    color: #f9f5d7;
 }
 
 #tray {
-    background-color: #BD9B61;
-    color: #9F7A39;
+    background-color: #434C5E;
+    color: #D8DEE9;
     padding-right: 5px;
     padding-left: 5px;
 }
 
 #clock {
-    background-color: #BD9B61;
-    color: #9F7A39;
+    background-color: #434C5E;
+    color: #D8DEE9;
 }
 
 #battery.charging {
-    background-color: #98971a;
-    color: #BD9B61;
+    background-color: #A3BE8C;
+    color: #434C5E;
 }
 
 @keyframes blink {
     to {
-        background-color: #BD9B61;
-        color: #cc241d;
+        background-color: #434C5E;
+        color: #BF616A;
     }
 }
 
 #battery.warning:not(.charging) {
-    background: #cc241d;
-    color: #BD9B61;
+    background: #BF616A;
+    color: #434C5E;
     animation-name: blink;
     animation-duration: 1.0s;
     animation-timing-function: linear;

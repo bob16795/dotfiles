@@ -2,10 +2,6 @@
 [
     {
         "key": "ctrl+r",
-        "command": "workbench.action.reloadWindow"
-    },
-    {
-        "key": "ctrl+r",
         "command": "-workbench.action.reloadWindow",
         "when": "isDevelopment"
     }

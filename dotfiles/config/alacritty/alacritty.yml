@@ -197,7 +197,7 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
   #primary:
   #  background: '#1d1f21'
@@ -218,9 +218,9 @@ font:
   #
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+  # cursor:
+    #  text: CellBackground
+    # cursor: CellBackground 
 
   # Vi mode cursor colors
   #
@@ -394,16 +394,16 @@ selection:
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: false
 
-#cursor:
+cursor:
   # Cursor style
-  #style:
+  style:
     # Cursor shape
     #
     # Values for `shape`:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    #shape: Block
+    shape: Beam
 
     # Cursor blinking state
     #
@@ -412,7 +412,7 @@ selection:
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    #blinking: Off
+  blinking: On 
 
   # Vi mode cursor style
   #
@@ -428,7 +428,7 @@ selection:
   # Time after which cursor stops blinking, in seconds.
   #
   # Specifying '0' will disable timeout for blinking.
-  #blink_timeout: 5
+  blink_timeout: 0
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
@@ -882,7 +882,7 @@ selection:
 
 #debug:
   # Display the time it takes to redraw each frame.
-  #render_timer: false
+  #render_timer: true
 
   # Keep the log file after quitting Alacritty.
   #persistent_logging: false
@@ -902,10 +902,10 @@ selection:
   #   - glsl3
   #   - gles2
   #   - gles2_pure
-  #renderer: None
+  #renderer: gles2
 
   # Print all received window events.
   #print_events: false
 
   # Highlight window damage information.
-  #highlight_damage: false
+  #highlight_damage: true
