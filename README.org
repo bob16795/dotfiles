@@ -1,6 +1,16 @@
 #+TITLE: Prestosilvers Dotfiles
 #+AUTHOR: Prestosilver
-#+TOC: headlines 2
+
+* TOC :TOC:
+- [[#install][INSTALL]]
+  - [[#install-arch][Install Arch]]
+  - [[#clone-the-repo][Clone the repo]]
+- [[#config-highlights][CONFIG HIGHLIGHTS]]
+- [[#budland][BUDLAND]]
+  - [[#config-highlights-1][Config Highlights]]
+  - [[#keybinds][Keybinds]]
+- [[#alacritty][Alacritty]]
+  - [[#config-highlights-2][Config Highlights]]
 
 * INSTALL
 ** Install Arch
@@ -8,16 +18,17 @@ You gotta figure out this yourself
 ** Clone the repo
 git clone https://github.com/bob16795/dotfiles
 * CONFIG HIGHLIGHTS
+- Mondo themes
+- Wayland
 * BUDLAND
-** Screen Shot
 #+ATTR_HTML: :width 300px
 [[./assets/wm.png]]
 ** Config Highlights
 - Tiling
+- Container focused workflow
 ** Keybinds
 - TODO!
 * Alacritty
-** Screen Shot
 #+ATTR_HTML: :width 300px
 [[./assets/alacritty.png]]
 
