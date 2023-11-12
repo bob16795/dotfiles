@@ -4,22 +4,38 @@
 * TOC :TOC:
 - [[#install][INSTALL]]
   - [[#install-arch][Install Arch]]
-  - [[#clone-the-repo][Clone the repo]]
+  - [[#clone-the-repo--sync-with-dotdrop][Clone the repo & sync with dotdrop]]
 - [[#config-highlights][CONFIG HIGHLIGHTS]]
-- [[#budland][BUDLAND]]
+- [[#alacritty][ALACRITTY]]
   - [[#config-highlights-1][Config Highlights]]
-  - [[#keybinds][Keybinds]]
-- [[#alacritty][Alacritty]]
+- [[#budland][BUDLAND]]
   - [[#config-highlights-2][Config Highlights]]
+  - [[#keybinds][Keybinds]]
+- [[#fish][FISH]]
+  - [[#config-highlights-3][Config Highlights]]
+- [[#mondo][Mondo]]
+  - [[#config-highlights-4][Config Highlights]]
 
 * INSTALL
 ** Install Arch
 You gotta figure out this yourself
-** Clone the repo
-git clone https://github.com/bob16795/dotfiles
+** Clone the repo & sync with dotdrop
+#+BEGIN_SRC bash
+git clone https://github.com/bob16795/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+./dotdrop -p default install
+#+END_SRC
+
 * CONFIG HIGHLIGHTS
 - Mondo themes
 - Wayland
+* ALACRITTY
+Alacritty is a terminal emulator
+#+ATTR_HTML: :width 300px
+[[./assets/alacritty.png]]
+
+** Config Highlights
+- Mondo integration
 * BUDLAND
 #+ATTR_HTML: :width 300px
 [[./assets/wm.png]]
@@ -28,9 +44,13 @@ git clone https://github.com/bob16795/dotfiles
 - Container focused workflow
 ** Keybinds
 - TODO!
-* Alacritty
+* FISH
 #+ATTR_HTML: :width 300px
-[[./assets/alacritty.png]]
-
+[[./assets/fish.png]]
 ** Config Highlights
-- Mondo integration
+- Zoxide
+- Emacs alias
+* Mondo
+Mondo is a theme manager
+** Config Highlights
+- Automatic system theme application
