@@ -4,7 +4,7 @@ if status is-interactive
     ls
 end
 
-set -gx BROWSER qutebrowser
+set -gx BROWSER firefox 
 set -gx XDG_DATA_HOME "$HOME/.local/share"
 set -gx BWP_COMMAND "waylandpaper"
 set -gx BWP_DIR "$HOME/pix/wallpapers"

@@ -113,13 +113,13 @@ window:
   #   - None (default)
   #option_as_alt: None
 
-#scrolling:
+scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  #history: 10000
+  history: 100000
 
   # Scrolling distance multiplier.
-  #multiplier: 3
+  multiplier: 3
 
 # Font configuration
 font:
@@ -191,7 +191,7 @@ font:
   # If `true`, Alacritty will use a custom built-in font for box drawing
   # characters (Unicode points 2500 - 259f).
   #
-  #builtin_box_drawing: true
+  builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -880,7 +880,7 @@ cursor:
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 
-#debug:
+debug:
   # Display the time it takes to redraw each frame.
   #render_timer: true
 
@@ -902,7 +902,7 @@ cursor:
   #   - glsl3
   #   - gles2
   #   - gles2_pure
-  #renderer: gles2
+  renderer: glsl3
 
   # Print all received window events.
   #print_events: false
