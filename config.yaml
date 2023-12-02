@@ -141,6 +141,9 @@ dotfiles:
   f_alacritty.yml:
     src: config/alacritty/alacritty.yml
     dst: ~/.config/alacritty/alacritty.yml
+  d_prestosilver:
+    src: config/nvim/lua/prestosilver
+    dst: ~/.config/nvim/lua/prestosilver
 profiles:
   john-pc:
     actions:
@@ -184,3 +187,4 @@ profiles:
     - f_pre-apply
     - f_post-apply
     - f_alacritty.yml
+    - d_prestosilver
