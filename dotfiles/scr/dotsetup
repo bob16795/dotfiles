@@ -46,7 +46,7 @@ $HOME/scr/filesort create
 git clone http://github.com/bob16795/colored-mist $HOME/doc/rep/github.com/colored-mist
 
 mondo -fg all
-mondo -a nord
+mondo -a notepad
 
 bwp -w {{@@ _dotdrop_dotpath @@}}/wallpaper.jpg
 

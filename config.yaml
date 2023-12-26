@@ -144,6 +144,9 @@ dotfiles:
   d_prestosilver:
     src: config/nvim/lua/prestosilver
     dst: ~/.config/nvim/lua/prestosilver
+  d_conf.d:
+    src: config/fish/conf.d
+    dst: ~/.config/fish/conf.d
 profiles:
   john-pc:
     actions:
@@ -188,3 +191,4 @@ profiles:
     - f_post-apply
     - f_alacritty.yml
     - d_prestosilver
+    - d_conf.d

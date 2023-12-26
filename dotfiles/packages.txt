@@ -57,6 +57,8 @@ P wine
 P neovim
 P zoxide
 P zathur-pdf-mupdf
+P zig
+P pulseaudio
 G bob16795/budwm
 G bob16795/st
 G bob16795/dmenu
