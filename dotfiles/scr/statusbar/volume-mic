@@ -14,7 +14,7 @@ esac
 vol=$(pamixer --default-source --get-volume)
 
 if [ "$(pamixer --default-source --get-mute)" == "true" ]; then
-  printf " $vol\n"
+  printf "\xf2 $vol\n"
   exit
 fi
-printf "\xf2 %s\n" $vol
+printf " %s\n" $vol

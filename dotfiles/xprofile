@@ -1,0 +1,28 @@
+s
+!/bin/bash
+
+cd
+$HOME/scr/screen2.sh
+eval $(/use/bin/gnome-keyring-daemon --start --component=gpg,pkcs11,secrets,ssh) &
+export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO GPG_AGENT_SOCK
+blueman-applet &
+nm-applet &
+flameshot &
+bwp &
+devmon &
+killall -KILL python3
+# sxhkd &
+picom --shadow -r 0 -o 0.5 -l 10 -t 10 --xrender-sync --xrender-sync-fence --glx-no-rebind-pixmap --glx-no-stencil &
+ync-fence &
+xrdb .Xresources
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "synaptics Noise Cancellation" 40 40 &
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Disable While Typing Enabled" 0.0
+/usr/lib/gsd-xsettings &
+/usr/lib/xdg-desktop-portal-gtk &
+clipmenud &
+#filesort &
+dunst &
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+
+# exec ~/doc/rep/github.com/con-wm/zig-out/bin/conman 2> ~/.conmaninfo
+prime-offload

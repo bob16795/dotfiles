@@ -12,5 +12,6 @@ require('prestosilver.status')
 require('prestosilver.telescope')
 require('prestosilver.term')
 require('prestosilver.tree')
+require('prestosilver.silicon')
 
 require('prestosilver.binds')

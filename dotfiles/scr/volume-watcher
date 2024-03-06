@@ -21,7 +21,7 @@ with Pulse() as pulse:
       if value != last_value or mute != last_mute:
         print(value, end='')
         if mute:
-            print('!')
+            print('')
         else:
             print('')
         last_value = value

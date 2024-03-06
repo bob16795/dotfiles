@@ -5,7 +5,7 @@ dunstmerge
 
 xrdb -merge ~/.Xresources
 
-xsetroot -name "fsignal:1"
+#xsetroot -name "fsignal:1"
 
 killall -v -USR1 st cava
 killall -v dunst
@@ -14,7 +14,7 @@ killall xeyes && xeyes +shape -outline "$(mondo -c bg)" &
 
 dunst -q &
 
-xsetroot -name "fsignal:1"
+#xsetroot -name "fsignal:1"
 
 filesort &
 killall xob

@@ -1,6 +1,2 @@
 #!/bin/bash
-if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
-  tmux new -s chat -n "Twitch Chat" $0
-  exit
-fi
 twitch-cli chat --read-only | sed "s/.*00 //"

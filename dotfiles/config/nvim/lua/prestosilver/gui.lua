@@ -1,5 +1,5 @@
 -- GUI Font
-vim.opt.guifont = "CaskaydiaCove NFP:h12"
+vim.opt.guifont = "CaskaydiaCove NFP:h9"
 
 -- neovide
 vim.g.neovide_cursor_vfx_mode = "railgun"

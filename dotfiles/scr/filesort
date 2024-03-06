@@ -13,7 +13,7 @@ HOME = PurePath(os.getenv("HOME"))
 dirs = [[HOME / "dwn",         False, True],
         [HOME / "doc/src",     True,  False],
         [HOME / "doc/srt",     True,  True],
-        [HOME,                 False,  False],
+        [HOME,                 False,  True],
         [HOME / "pix",         False,  True]]
 SORT = {
         "*.pdf": "mv %%file%% " + str(HOME / "doc/pdf/msc"),

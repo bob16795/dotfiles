@@ -66,7 +66,6 @@
         "*.bin": "hexEditor.hexedit"
     },
     "zenMode.fullScreen": false,
-    "zenMode.hideTabs": false,
     "[jsonc]": {
         "editor.defaultFormatter": "HookyQR.beautify"
     },
@@ -110,4 +109,5 @@
     "editor.tabSize": 2,
     "nim.nimprettyIndent": 2,
     "nim.useNimsuggestCheck": true,
+    "zig.initialSetupDone": false,
 }

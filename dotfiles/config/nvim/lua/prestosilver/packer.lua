@@ -51,7 +51,9 @@ require("packer").startup(function(use)
     use 'brenoprata10/nvim-highlight-colors'
     use "akinsho/toggleterm.nvim"
     use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use 'sbdchd/neoformat'
+    use 'michaelrommel/nvim-silicon'
 end)

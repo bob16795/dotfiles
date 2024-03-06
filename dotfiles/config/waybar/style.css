@@ -3,38 +3,38 @@
     font-family: CaskaydiaCove NFP;
     font-weight: bold;
     min-height: 20px;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 window#waybar {
-    background: #FF8C57;
-    color: #ffffff;
+    background: #E54F5D;
+    color: #FFFFFF;
 }
 
 #window {
-    background: #FF8C57;
-    color: #ffffff;
+    background: #E54F5D;
+    color: #FFFFFF;
 }
 
 #custom-spacer {
     padding: 0 5px;
-    color: #F77438;
+    color: #E54F5D;
 }
 
 #cava {
   padding: 0 5px;
-  background: #FFBB8B;
-  color: #FF8C57;
+  background: #1b1b1b;
+  color: #E54F5D;
 }
 
 #title.lt {
-  background-color: #BD9B61;
-  color: #9F7A39;
+  background-color: #9A1C3E;
+  color: #ffffff;
 }
 
 #pulseaudio.muted {
-  background-color: #BD9B61;
-  color: #9F7A39;
+  background-color: #9A1C3E;
+  color: #ffffff;
 }
 
 #battery.1 {
@@ -51,37 +51,37 @@ window#waybar {
 #user,
 #pulseaudio,
 #custom-spotify {
-    background-color: #FF8C57;
-    color: #ffffff;
+    background-color: #E54F5D;
+    color: #FFFFFF;
 }
 
 #tray {
-    background-color: #BD9B61;
-    color: #9F7A39;
+    background-color: #9A1C3E;
+    color: #ffffff;
     padding-right: 5px;
     padding-left: 5px;
 }
 
 #clock {
-    background-color: #BD9B61;
-    color: #9F7A39;
+    background-color: #9A1C3E;
+    color: #ffffff;
 }
 
 #battery.charging {
-    background-color: #98971a;
-    color: #BD9B61;
+    background-color: #3EA290;
+    color: #9A1C3E;
 }
 
 @keyframes blink {
     to {
-        background-color: #BD9B61;
-        color: #cc241d;
+        background-color: #9A1C3E;
+        color: #899AFF;
     }
 }
 
 #battery.warning:not(.charging) {
-    background: #cc241d;
-    color: #BD9B61;
+    background: #899AFF;
+    color: #9A1C3E;
     animation-name: blink;
     animation-duration: 1.0s;
     animation-timing-function: linear;

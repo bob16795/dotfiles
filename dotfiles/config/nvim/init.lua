@@ -83,10 +83,12 @@ vim.opt.syntax = "on"
 -- styiling
 vim.opt.fillchars = "vert:▎"
 
+vim.g.neoformat_enabled_nim = { "nph" }
+
 -- bamba
-vim.api.nvim_create_autocmd('BufRead,BufNewFile', {
-    pattern = { '*.bam' },
-    callback = function()
-        vim.opt.syntax = 'bamba'
-    end,
-})
+--vim.api.nvim_create_autocmd('BufRead,BufNewFile', {
+--    pattern = { '*.bam' },
+--    callback = function()
+--        vim.opt.syntax = 'bamba'
+--    end,
+--})

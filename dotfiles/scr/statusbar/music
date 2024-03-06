@@ -1,11 +1,19 @@
 case $1 in
-  1) spt pb -t; exit;;
-  2) spt pb -p; exit;;
-  3) spt pb -n; exit;;
+  1) playerctl play-pause; exit;;
+  2) playerctl previous; exit;;
+  3) playerctl next; exit;;
 esac
 
+st=$(playerctl metadata --format '{{artist}}: {{lc(title)}}' 2>&1)
+if [ "$st" != "No players found" ]; then
+    echo $st
+
+    exit
+fi
+
+echo "No Music"
+
 #spt pb -f "%s %t" ||
- printf "No Music"
 #[[ "$(pgrep spotify)" == "" ]] || { eval "$(spotify-cli now-playing)" \
 #  && printf "  $spotify_artist_name - $spotify_track_name" \
 #  | tr -d '\n' \
