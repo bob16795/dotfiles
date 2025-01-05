@@ -4,14 +4,14 @@ case $1 in
   3) playerctl next; exit;;
 esac
 
-st=$(playerctl metadata --format '{{artist}}: {{lc(title)}}' 2>&1)
-if [ "$st" != "No players found" ]; then
-    echo $st
+mpc status | sed -n -e '1{p;q}'
 
-    exit
-fi
-
-echo "No Music"
+#st=$(playerctl metadata --format '{{artist}}: {{lc(title)}}' 2>&1)
+#if [ "$st" != "No players found" ]; then
+#    echo $st
+#
+#    exit
+#fi
 
 #spt pb -f "%s %t" ||
 #[[ "$(pgrep spotify)" == "" ]] || { eval "$(spotify-cli now-playing)" \

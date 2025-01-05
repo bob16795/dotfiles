@@ -17,7 +17,7 @@ endif
 let g:colors_name="mondo"
 set termguicolors
 
-hi Normal guifg=#ffffff guibg=#1b1b1b
+hi Normal guifg=#adbcbc guibg=#103c48
 
 " OR
 
@@ -46,30 +46,30 @@ hi Normal guifg=#ffffff guibg=#1b1b1b
 
 "hi Cursor		
 "hi CursorIM	
-hi Directory guifg=#ffffff
+hi Directory guifg=#adbcbc
 "hi DiffAdd		
 "hi DiffChange	
 "hi DiffDelete	
 "hi DiffText	
 "hi ErrorMsg	
-hi VertSplit guibg=#9A1C3E guifg=#9A1C3E
-hi EndOfBuffer guibg=#1b1b1b guifg=#1b1b1b
+hi VertSplit guibg=#103c48 guifg=#184956
+hi EndOfBuffer guibg=#103c48 guifg=#103c48
 "hi Folded		
 "hi FoldColumn	
 "hi IncSearch	
-hi LineNr guibg=#1b1b1b guifg=#ffffff gui=bold
-hi CursorLineNr guibg=#1b1b1b guifg=#B0EAD9 gui=bold
+hi LineNr guibg=#103c48 guifg=#adbcbc gui=bold
+hi CursorLineNr guibg=#103c48 guifg=#dbb32d gui=bold
 "hi ModeMsg		
-hi MoreMsg guibg=#1b1b1b guifg=#ffffff gui=reverse
-hi NonText guifg=#8292B2		
-hi Question guibg=#1b1b1b guifg=#ffffff
-hi Search guibg=#E54F5D guifg=#FFFFFF
-hi SpecialKey	guifg=#8292B2
-hi StatusLine guibg=#E54F5D guifg=#FFFFFF	gui=bold
-hi SignColumn guibg=#9A1C3E guifg=#ffffff gui=none
-hi LineNr guibg=#9A1C3E guifg=#ffffff gui=none
-hi StatusLineNC	guibg=#E54F5D guifg=#FFFFFF gui=bold
-hi User1 guibg=#E54F5D guifg=#FFFFFF
+hi MoreMsg guibg=#103c48 guifg=#adbcbc gui=reverse
+hi NonText guifg=#ff84cd		
+hi Question guibg=#103c48 guifg=#adbcbc
+hi Search guibg=#184956 guifg=#cad8d9
+hi SpecialKey	guifg=#ff84cd
+hi StatusLine guibg=#184956 guifg=#cad8d9	gui=bold
+hi SignColumn guibg=#103c48 guifg=#adbcbc gui=none
+hi LineNr guibg=#103c48 guifg=#adbcbc gui=none
+hi StatusLineNC	guibg=#184956 guifg=#cad8d9 gui=bold
+hi User1 guibg=#184956 guifg=#cad8d9
 "hi Title		
 "hi Visual		
 "hi VisualNOS	
@@ -80,43 +80,43 @@ hi User1 guibg=#E54F5D guifg=#FFFFFF
 "hi Tooltip		
 
 " syntax highlighting groups
-hi Comment gui=italic guifg=#3EA290
-hi Constant guifg=#B0EAD9
-hi Identifier guifg=#596196 gui=bold
-hi Statement guifg=#ffffff
-hi PreProc guifg=#31658C
-hi Type	guifg=#95A7CC
-hi Special guifg=#8292B2
-hi Underlined	guifg=#31658C gui=underline
+hi Comment gui=italic guifg=#75b938
+hi Constant guifg=#dbb32d
+hi Identifier guifg=#f275be gui=bold
+hi Statement guifg=#adbcbc
+hi PreProc guifg=#4695f7
+hi Type	guifg=#41c7b9
+hi Special guifg=#ff84cd
+hi Underlined	guifg=#4695f7 gui=underline
 "hi Ignore		
 "hi Error		
 "hi Todo		
 
-hi SyntasticErrorLine guibg=#899AFF
-hi SyntasticErrorSign guibg=#1b1b1b guifg=#899AFF
-hi SyntasticWarningLine guibg=#B0EAD9
-hi SyntasticWarningSign guibg=#1b1b1b guifg=#B0EAD9
-hi String guifg=#3EA290
+hi SyntasticErrorLine guibg=#fa5750
+hi SyntasticErrorSign guibg=#103c48 guifg=#fa5750
+hi SyntasticWarningLine guibg=#dbb32d
+hi SyntasticWarningSign guibg=#103c48 guifg=#dbb32d
+hi String guifg=#75b938
 
-hi TabLine guibg=#9A1C3E guifg=#9A1C3E
+hi TabLine guibg=#103c48 guifg=#184956
 
-hi BufferCurrent guibg=#E54F5D guifg=#FFFFFF
-hi BufferCurrentMod guibg=#E54F5D guifg=#FFFFFF
-hi BufferCurrentSign guibg=#E54F5D guifg=#E54F5D
-hi BufferCurrentSignRight guibg=#E54F5D guifg=#9A1C3E
+hi BufferCurrent guibg=#184956 guifg=#cad8d9
+hi BufferCurrentMod guibg=#184956 guifg=#cad8d9
+hi BufferCurrentSign guibg=#184956 guifg=#184956
+hi BufferCurrentSignRight guibg=#184956 guifg=#184956
 
-hi BufferVisible guibg=#9A1C3E guifg=#ffffff
-hi BufferVisibleMod guibg=#9A1C3E guifg=#ffffff
-hi BufferVisibleSign guibg=#9A1C3E guifg=#9A1C3E
-hi BufferVisibleSignRight guibg=#9A1C3E guifg=#9A1C3E
+hi BufferVisible guibg=#103c48 guifg=#adbcbc
+hi BufferVisibleMod guibg=#103c48 guifg=#adbcbc
+hi BufferVisibleSign guibg=#103c48 guifg=#184956
+hi BufferVisibleSignRight guibg=#103c48 guifg=#184956
 
-hi BufferInactive guibg=#9A1C3E guifg=#ffffff
-hi BufferInactiveMod guibg=#9A1C3E guifg=#ffffff
-hi BufferInactiveSign guibg=#9A1C3E guifg=#9A1C3E
-hi BufferInactiveSignRight guibg=#9A1C3E guifg=#9A1C3E
+hi BufferInactive guibg=#103c48 guifg=#adbcbc
+hi BufferInactiveMod guibg=#103c48 guifg=#adbcbc
+hi BufferInactiveSign guibg=#103c48 guifg=#184956
+hi BufferInactiveSignRight guibg=#103c48 guifg=#184956
 
-hi BufferTabpageFill guibg=#9A1C3E guifg=#ffffff
-hi BufferOffset guibg=#1b1b1b guifg=#ffffff
+hi BufferTabpageFill guibg=#103c48 guifg=#adbcbc
+hi BufferOffset guibg=#103c48 guifg=#adbcbc
 
-hi Pmenu guibg=#9A1C3E guifg=#ffffff
-hi PmenuSel guibg=#E54F5D guifg=#FFFFFF
+hi Pmenu guibg=#103c48 guifg=#adbcbc
+hi PmenuSel guibg=#184956 guifg=#cad8d9

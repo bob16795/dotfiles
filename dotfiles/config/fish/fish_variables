@@ -47,5 +47,5 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dreverse
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/john/scr/statusbar\x1e/home/john/scr\x1e/home/john/\x2enimble/bin\x1e/home/john/\x2elocal/slam/bin\x1e/home/john/\x2ecargo/bin\x1e/home/john/\x2elocal/bin
+SETUVAR fish_user_paths:/home/john/\x2erustup/toolchains/nightly\x2dx86_64\x2dunknown\x2dlinux\x2dgnu/bin\x1e/usr/lib/emscripten\x1e/opt/emscripten\x2dllvm/bin\x1e/home/john/scr/statusbar\x1e/home/john/scr\x1e/home/john/\x2enimble/bin\x1e/home/john/\x2elocal/slam/bin\x1e/home/john/\x2ecargo/bin\x1e/home/john/\x2elocal/bin
 SETUVAR zoxide_cmd:cd

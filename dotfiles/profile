@@ -29,3 +29,8 @@ killall pulseaudio
 
 # opam configuration
 test -r $HOME/.opam/opam-init/init.sh && . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/john/.local/share/JetBrains/Toolbox/scripts"
+

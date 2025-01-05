@@ -17,7 +17,7 @@ buttons[random]="%{A1:bwpcontrol random:}%{A}"
 # of the currentwallpaper
 buttons[text]="%{A1:bwpcontrol menu:}CURRENTWALL%{A}"
 
-[[ -n $(polify --module "$_polybarmodule") ]] && _state=controls
+#[[ -n $(polify --module "$_polybarmodule") ]] && _state=controls
 
 main() {
 
@@ -28,11 +28,7 @@ main() {
     ;;
 
     ( toggle )
-      if [[ $_state = controls ]]; then
-        polify --module "$_polybarmodule" --clear
-      else
-        updatemodule
-      fi
+      updatemodule
     ;;
 
     ( next|prev|random|delete )
@@ -54,9 +50,8 @@ select_wallpaper() {
   wdir="$BWP_DIR/walls"
 
   newwall="$(
-
     find "$wdir" ! -path "$wdir" -printf '%f\n' \
-    | menu
+    | dmenu
   )"
 
   [[ -n $newwall ]] && {
@@ -129,7 +124,7 @@ updatemodule() {
   # lbl is the module content
   lbl="%{A1::} ${pr+$ip }$ie $id $ir ${ne+$in }$it%{A}"
 
-  polify --module "$_polybarmodule" "$lbl"
+  #polify --module "$_polybarmodule" "$lbl"
 }
 
 main "${@}"

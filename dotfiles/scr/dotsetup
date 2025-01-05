@@ -1,4 +1,4 @@
-sudo chown -R {{@@ user @@}} $HOME
+sudo chown -R john $HOME
 source $HOME/.bashrc
 
 mkdir -p $HOME/.config/ranger/plugins/
@@ -18,7 +18,7 @@ yay -S --noconfirm --needed python3 python-pip
 
 IFS=$'\n'
 
-for line in $(cat {{@@ _dotdrop_dotpath @@}}/packages.txt); do
+for line in $(cat /home/john/.dotfiles/dotfiles/packages.txt); do
   type=$(echo $line | cut -d " " -f1)
   toinstall=$(echo $line | cut -d " " -f2)
 

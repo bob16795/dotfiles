@@ -3,8 +3,6 @@
     "modules-left": [
         "dwl/title#lt",
         "clock",
-        "battery#1",
-        "custom/spacer",
         "battery#2",
         "custom/spacer",
         "pulseaudio",
@@ -32,6 +30,9 @@
     },
     "dwl/title#lt": {
         "format": " {layout} F{tag} ",
+    },
+    "hyprland/workspaces": {
+        "active-only": true,
     },
     "gamemode": {
         "format": "{glyph} {count}",
@@ -70,7 +71,8 @@
         ]
     },
     "clock": {
-        "format-alt": "{:%d %b}"
+        "format": " {:%H:%M} ",
+        "format-alt":  "{:%d %b} "
     },
     "disk#2": {
         "interval": 30,

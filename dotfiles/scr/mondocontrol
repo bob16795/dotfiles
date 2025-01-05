@@ -17,8 +17,6 @@ buttons[random]="%{A1:bwpcontrol random:}%{A}"
 # of the currentwallpaper
 buttons[text]="%{A1:bwpcontrol menu:}CURRENTWALL%{A}"
 
-[[ -n $(polify --module "$_polybarmodule") ]] && _state=controls
-
 main() {
 
   case "$1" in
@@ -28,11 +26,7 @@ main() {
     ;;
 
     ( toggle )
-      if [[ $_state = controls ]]; then
-        polify --module "$_polybarmodule" --clear
-      else
-        updatemodule
-      fi
+      updatemodule
     ;;
 
     ( next|prev|random|delete )
@@ -55,20 +49,7 @@ select_wallpaper() {
 
   newwall="$(
     mondo -l themes \
-    | if command -v i3menu > /dev/null ; then
-        i3menu                   \
-	  --theme nopad          \
-          --orientation vertical \
-          --width       300      \
-          --ypos        25       \
-          --layout      mouse    \
-          --anchor      2        \
-          --height      350      \
-
-      else
-        menu 
-      fi
-
+    | dmenu 
   )"
 
   [[ -n $newwall ]] && {
@@ -138,8 +119,6 @@ updatemodule() {
 
   # lbl is the module content
   lbl="%{A1::} ${pr+$ip }$ie $id $ir ${ne+$in }$it%{A}"
-
-  polify --module "$_polybarmodule" "$lbl"
 }
 
 main "${@}"

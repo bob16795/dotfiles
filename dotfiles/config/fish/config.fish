@@ -17,10 +17,16 @@ set -gx LD_LIBRARY_PATH "/opt/libxfce4ui-nocsd/lib:$LD_LIBRARY_PATH"
 set -gx BWP_LOCK_IMAGE_OPTIONS "-resize 2560x1080!"
 set -gx CM_HISTLENGTH 20
 set -gx JAVA_HOME /usr/lib/jvm/java-8-openjdk/jre/
-set -gx BWP_GEOMETRY "2560x1080"
+set -gx BWP_GEOMETRY "2256x1504"
 set -gx MOZ_ENABLE_WAYLAND 1
 
 thefuck --alias oops | source
 
 alias spotifyd='spotifyd -u 21ndnpvlkdukezg7ht2mkcyay -P "pass spotify" --device-type speaker -d "Jorjes House" --on-song-change-hook "album-art"' 
 alias vim='neovide'
+
+function fish_right_prompt
+  #intentionally left blank
+end
+
+thefuck --alias | source

@@ -21,7 +21,8 @@ SORT = {
         "*.jpg": "mv %%file%% " + str(HOME / "pix/msc"),
         "*.png": "mv %%file%% " + str(HOME / "pix/msc"),
         "*.gif": "mv %%file%% " + str(HOME / "pix/msc"),
-        "*.mp4": "mv %%file%% " + str(HOME / "vid/castor"),
+        "*.mp4": "mv %%file%% " + str(HOME / "vid/msc"),
+        "*.mkv": "mv %%file%% " + str(HOME / "vid/msc"),
         "*.download": "ls",
         "*": ["mkdir -p " + str("%%path%%/%%ext%%"),
               "mv %%file%% " + str("%%path%%/%%ext%%")],
@@ -33,7 +34,8 @@ dir_actions = [
     },
     SORT,
     {
-      "*.png": "mv %%file%% " + str(HOME / "pix/ss")
+      "*.png": "mv %%file%% " + str(HOME / "pix/ss"),
+      "*.mkv": "mv %%file%% " + str(HOME / "vid/msc"),
     },
     {
       "*.png": "mv %%file%% " + str(HOME / "pix/ss")

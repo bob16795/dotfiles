@@ -40,7 +40,7 @@ require("packer").startup(function(use)
     use 'romgrk/barbar.nvim'
 
     use 'pwntester/octo.nvim'
-    use 'andweeb/presence.nvim'
+    --use 'andweeb/presence.nvim'
     use 'junegunn/goyo.vim'
     use { 'yoshio15/vim-trello', branch = 'main' }
     use 'MarcWeber/vim-addon-mw-utils'

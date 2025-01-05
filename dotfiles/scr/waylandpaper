@@ -3,12 +3,11 @@
 #[[ "" == "$(mondo -c wall)" ]] || swaybg --color $(mondo -c wall) && swaybg --color=$(mondo -c bg) &
 # swaybg --image=$HOME/pix/wallpapers/currentwall --mode=fill &
 #
-set -xe
-
 #color=$(mondo -c wall)
 #convert -size 100x100 "xc:$color" ~/pix/wallpapers/wall.png
 #feh --bg-fill ~/pix/wallpapers/wall.png
-feh --bg-fill ~/pix/wallpapers/wall.jpg
+sleep 1
+feh --bg-fill $1
+#feh --bg-fill ~/pix/wallpapers/currentwall
 #swww img ~/pix/wallpapers/wall.png
-
-#swww img ~/pix/wallpapers/wall.jpg --transition-type outer -f Nearest --transition-fps 60
+#swww img ~/pix/wallpapers/currentwall --transition-type outer -f Nearest --transition-fps 60

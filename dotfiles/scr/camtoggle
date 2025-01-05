@@ -1,2 +1,2 @@
 #!/bin/sh
-pkill -f /dev/video0 || mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --geometry=1080x720 --untimed /dev/video0
+pkill -f /dev/video1 || mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --geometry=1080x720 --untimed /dev/video2
